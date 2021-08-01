@@ -19,3 +19,18 @@ class TemperatureHumidity:
         #print('RH = {:.1f} %\n'.format(sensorSHT31.relative_humidity))
         RHData = format(sensorSHT31.relative_humidity, '.3f')
         return RHData
+
+RH = sensorSHT31.relative_humidity
+
+class Watering:
+    def __init__(self):
+        return
+    
+    def getWateringData(self):
+        if RH < 50.0:
+            answer = "Need water. "
+        elif RH > 60.0:
+            answer = "Too much water. "
+        else:
+            answer = "It's fine now. "
+        return answer
