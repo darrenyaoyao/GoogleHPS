@@ -14,7 +14,10 @@ sgp30.set_iaq_baseline(0x8973, 0x8AAE)
 class AirQuality:
     def __init__(self):
         return
-
+    
+    def getData(self):
+        return 100
+    
     def get_eCO2_Data(self):
         return sgp30.eCO2 # ppm
     
