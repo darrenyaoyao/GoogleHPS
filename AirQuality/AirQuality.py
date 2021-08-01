@@ -16,10 +16,23 @@ class AirQuality:
         return
     
     def getData(self):
-        return 100
+        return str(sgp30.eCO2) + ' ppm ／ ' + str(sgp30.TVOC) + ' ppb'
     
     def get_eCO2_Data(self):
         return str(sgp30.eCO2) + ' ppm'
     
     def get_TVOC_Data(self):
         return str(sgp30.TVOC) + ' ppb'
+    
+    def get_Ethanol_Data(self):
+        return str(sgp30.Ethanol)
+    
+    def get_H2_Data(self):
+        return str(sgp30.H2)
+
+    def good_or_bad(self):
+        # CO2 標準：8 小時內平均在 1000 ppm 以內
+        # TVOC 標準：1 小時內平均在 0.56 ppm 以內
+        if sgp30.eCO2 < 1000 & sgp30.TVOC*1000 < 0.56 :
+            retrun 'Good air quality！'
+        else : retrun 'Bad air quality！'
