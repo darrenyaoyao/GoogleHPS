@@ -19,7 +19,7 @@ class AirQuality:
         return 100
     
     def get_eCO2_Data(self):
-        return sgp30.eCO2 # ppm
+        return str(sgp30.eCO2) + ' ppm'
     
     def get_TVOC_Data(self):
-        return sgp30.TVOC # ppb
+        return str(sgp30.TVOC) + ' ppb'
