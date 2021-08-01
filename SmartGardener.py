@@ -12,10 +12,9 @@ light = Light()
 temperatureHumidity = TemperatureHumidity()
 watering = Watering()
 
-
 @app.route("/")
 def home():
-    return "空氣品質: " + airQuality.getData() + "<br/>" + \
+    return "空氣品質: " + airQuality.getData() + " => " + airQuality.good_or_bad() + "<br/>" + \
            "GSensor: " + str(gsensor.getData()) + "<br/>" + \
            "陽光強度: " + str(light.getData()) + "<br/>" + \
            "溫度: " + str(temperatureHumidity.getTemperatureData()) + "<br/>" + \
