@@ -16,4 +16,4 @@ class TemperatureHumidity:
 
     def getHumidityData(self):
         print('RH = {:.1f} %\n'.format(sensorSHT31.relative_humidity))
-        return 50
+        return
