@@ -3,12 +3,14 @@ from AirQuality.AirQuality import AirQuality
 from GSensor.GSensor import GSensor
 from Light.Light import Light
 from TemperatureHumidity.TemperatureHumidity import TemperatureHumidity
+from TemperatureHumidity.TemperatureHumidity import Watering
 
 app = Flask("Smart Gardener")
 airQuality = AirQuality()
 gsensor = GSensor()
 light = Light()
 temperatureHumidity = TemperatureHumidity()
+watering = Watering()
 
 
 @app.route("/")
@@ -17,4 +19,5 @@ def home():
            "GSensor: " + str(gsensor.getData()) + "<br/>" + \
            "陽光強度: " + str(light.getData()) + "<br/>" + \
            "溫度: " + str(temperatureHumidity.getTemperatureData()) + "<br/>" + \
-           "濕度: " + str(temperatureHumidity.getHumidityData())
+           "濕度: " + str(temperatureHumidity.getHumidityData() + "<br/r>" + \
+           "澆水: " + str(watering.getWateringData()))
