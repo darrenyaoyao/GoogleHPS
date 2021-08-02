@@ -73,3 +73,33 @@
 不要  
 
     pip3
+# [Using the SGP30 with CircuitPython and the Adafruit library](https://github.com/adafruit/Adafruit_CircuitPython_SGP30/blob/main/examples/sgp30_simpletest.py)
+SGP30 簡單使用範例程式
+
+    import time
+    import board
+    import busio
+    import adafruit_sgp30
+    
+    # 定義 busio.I2C 和 sensor 物件
+    i2c = busio.I2C(board.SCL, board.SDA, frequency=100000)
+    sgp30 = adafruit_sgp30.Adafruit_SGP30(i2c)
+
+    print("SGP30 serial #", [hex(i) for i in sgp30.serial])
+
+    # IAQ 演算法：將 H₂ 濃度換算成 eCO₂ 的濃度
+    sgp30.iaq_init()
+    sgp30.set_iaq_baseline(0x8973, 0x8AAE)
+
+    elapsed_sec = 0
+
+    while True:
+        # 讀值：eCO2 & TVOC
+        print("eCO2 = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))     
+        time.sleep(1) # 等一下
+        elapsed_sec += 1
+        # 每 10 次輸出 1 次 Baseline values
+        # 好像和「IAQ 演算法」有關
+        if elapsed_sec > 10:
+            elapsed_sec = 0
+            print("**** Baseline values: eCO2 = 0x%x, TVOC = 0x%x" % (sgp30.baseline_eCO2, sgp30.baseline_TVOC))
