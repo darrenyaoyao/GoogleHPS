@@ -34,5 +34,5 @@ class AirQuality:
         # CO2 標準：8 小時內平均在 1000 ppm 以內
         # TVOC 標準：1 小時內平均在 0.56 ppm 以內
         if sgp30.eCO2 < 1000 & sgp30.TVOC*1000 < 0.56 :
-            retrun 'Good air quality！'
-        else : retrun 'Bad air quality！'
+            return 'Good air quality！'
+        else : return 'Bad air quality！'
