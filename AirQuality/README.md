@@ -3,7 +3,7 @@
 - 使用 I2C 介面
 - 適合室內使用
 - 可檢測 VOC（揮發性有機化合物）和 H₂
-- 沒有 eCO₂ sensor，但會用 H₂ 濃度推算出來
+- 沒有 eCO₂ sensor，但會用 H₂ 濃度推算出來（IAQ 演算法）
 ## Power Pins
 - VIN：電源接角
 - 1V8：可穩定輸出 1.8V，但應該用不到
@@ -98,8 +98,7 @@ SGP30 簡單使用範例程式
         print("eCO₂ = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))     
         time.sleep(1) # 等一下
         elapsed_sec += 1
-        # 每 10 次輸出 1 次 Baseline values
-        # 好像和「IAQ 演算法」有關
+        # 每 10 次輸出 1 次 Baseline values 和 IAQ 演算法有關
         if elapsed_sec > 10:
             elapsed_sec = 0
             print("**** Baseline values: eCO₂ = 0x%x, TVOC = 0x%x" % (sgp30.baseline_eCO2, sgp30.baseline_TVOC))
