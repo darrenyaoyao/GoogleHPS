@@ -31,8 +31,12 @@ class AirQuality:
         return str(sgp30.H2)
 
     def good_or_bad(self):
-        # CO2 標準：8 小時內平均在 1000 ppm 以內
+        # CO₂ 標準：8 小時內平均在 1000 ppm 以內
         # TVOC 標準：1 小時內平均在 0.56 ppm 以內
-        if sgp30.eCO2 < 1000 & sgp30.TVOC*1000 < 0.56 :
+        if sgp30.eCO2 <= 1000 & sgp30.TVOC*1000 <= 0.56 :
             return 'Good air quality！'
-        else : return 'Bad air quality！'
+        elif sgp30.eCO2 > 1000 & sgp30.TVOC*1000 <= 0.56 :
+            return 'CO₂ is too high！'
+        elif sgp30.eCO2 <= 1000 & sgp30.TVOC*1000 > 0.56 :
+            return 'TVOC is too high！'
+        else : return 'Both CO₂ and TVOC are too high！Bad air quality！'
