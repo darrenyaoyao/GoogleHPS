@@ -94,12 +94,12 @@ SGP30 簡單使用範例程式
     elapsed_sec = 0
 
     while True:
-        # 讀值：eCO2 & TVOC
-        print("eCO2 = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))     
+        # 讀值：eCO₂ & TVOC
+        print("eCO₂ = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))     
         time.sleep(1) # 等一下
         elapsed_sec += 1
         # 每 10 次輸出 1 次 Baseline values
         # 好像和「IAQ 演算法」有關
         if elapsed_sec > 10:
             elapsed_sec = 0
-            print("**** Baseline values: eCO2 = 0x%x, TVOC = 0x%x" % (sgp30.baseline_eCO2, sgp30.baseline_TVOC))
+            print("**** Baseline values: eCO₂ = 0x%x, TVOC = 0x%x" % (sgp30.baseline_eCO2, sgp30.baseline_TVOC))
