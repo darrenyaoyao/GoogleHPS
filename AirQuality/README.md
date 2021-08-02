@@ -14,12 +14,17 @@
 # Raspberry Pi 和 SGP30 接線（wired with I2C）
 |SGP30|Raspberry Pi|
 |:-:|:-:|
-|VIN|3V3 （17 號）|
-|GND|GND（25 號）|
-|SCL|SCL （5 號）|
-|SDA|SDA（3 號）|
+|VIN|3V3|
+|GND|GND|
+|SCL|SCL|
+|SDA|SDA|
 
 沒用到 1V8 Pin
+## Raspberry Pi GPIO
+3V3：1、17 號  
+GND：6、9、14、20、25、30、34、39 號  
+SCL：5 號  
+SDA：3 號
 ## 檢查是否接對
 接好線可以在 Terminal 中用：  
 
