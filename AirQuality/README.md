@@ -1,4 +1,6 @@
 # [Air quality sensor：SGP30 TVOC/eCO2 Gas Sensor](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-sgp30-gas-tvoc-eco2-mox-sensor.pdf)
+<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/AirQuality/SGP30.png" width='30%' height='30%'/>
+
 > ## 簡介
 - 使用 I2C 介面
 - 適合室內使用
@@ -12,6 +14,8 @@
 - **SCL**：I2C clock 接角
 - **SDA**：I2C data 接角
 # Raspberry Pi 和 SGP30 接線（wired with I2C）
+<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/AirQuality/Raspberry%20Pi%20%26%20SGP30%20wired%20with%20I2C.png" width='60%' height='60%'/>
+
 |SGP30|Raspberry Pi|
 |:-:|:-:|
 |VIN|3V3|
