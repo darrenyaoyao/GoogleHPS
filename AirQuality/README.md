@@ -23,7 +23,7 @@
 |SCL|SCL|
 |SDA|SDA|
 
-沒用到 1V8 Pin
+- 沒用到 1V8 Pin
 > ## Raspberry Pi GPIO Pin
 - **3V3**：1、17 號  
 - **GND**：6、9、14、20、25、30、34、39 號  
