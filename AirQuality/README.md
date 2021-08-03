@@ -14,7 +14,7 @@
 - **SCL**：I2C clock 接角
 - **SDA**：I2C data 接角
 # Raspberry Pi 和 SGP30 接線（wired with I2C）
-<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/AirQuality/Photos/Raspberry%20Pi%20%26%20SGP30%20wired%20with%20I2C.png" width='60%' height='60%'/>
+<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/AirQuality/Photos/Raspberry%20Pi%20%26%20SGP30%20wired%20with%20I2C.png" width='45%' height='45%'/>
 
 |SGP30|Raspberry Pi|
 |:-:|:-:|
