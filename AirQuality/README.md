@@ -47,7 +47,7 @@
     60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     70: -- -- -- -- -- -- -- --
 # 下載 Library
-> ## 在 Terminal 中下載 [CircuitPython](https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi)
+> ## 在 Terminal 中下載：[CircuitPython](https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi)
 
     sudo apt-get update
     sudo apt-get upgrade
@@ -58,13 +58,13 @@
     wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
     sudo python3 raspi-blinka.py
 可能會問「Continue？」輸入 y，Enter
-> ## 在 Terminal 中下載 [Adafruit's CircuitPython library bundle](https://github.com/adafruit/Adafruit_CircuitPython_Bundle)
+> ## 在 Terminal 中下載：[Adafruit's CircuitPython library bundle](https://github.com/adafruit/Adafruit_CircuitPython_Bundle)
 
     pip3 install adafruit-circuitpython-lis3dh
-> ## 在 Terminal 中下載 [adafruit_sgp30.mpy](https://github.com/adafruit/Adafruit_CircuitPython_SGP30)
+> ## 在 Terminal 中下載：[adafruit_sgp30.mpy](https://github.com/adafruit/Adafruit_CircuitPython_SGP30)
 
     pip3 install adafruit-circuitpython-sgp30
-> ## 在 Terminal 中下載 [adafruit_bus_device](https://github.com/adafruit/Adafruit_CircuitPython_BusDevice/tree/5aceeae814effae4eb950f1078c194b11401faa7)
+> ## 在 Terminal 中下載：[adafruit_bus_device](https://github.com/adafruit/Adafruit_CircuitPython_BusDevice/tree/5aceeae814effae4eb950f1078c194b11401faa7)
 
     pip3 install adafruit-circuitpython-busdevice
 > ## 下載注意
