@@ -1,5 +1,5 @@
 # [Air quality sensor：SGP30 TVOC/eCO2 Gas Sensor](https://cdn-learn.adafruit.com/downloads/pdf/adafruit-sgp30-gas-tvoc-eco2-mox-sensor.pdf)
-<img src="" width='30%' height='30%'/>
+<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/AirQuality/Photos/SGP30.png" width='78%' height='78%'/>
 
 > ## 簡介
 - 使用 I2C 介面
