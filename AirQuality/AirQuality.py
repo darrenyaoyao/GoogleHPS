@@ -22,6 +22,7 @@ class AirQuality:
         return str(sgp30.eCO2) + ' ppm'
     
     def get_TVOC_Data(self):
+        # 揮發性有機化合物
         return str(sgp30.TVOC) + ' ppb'
     
     def get_Ethanol_Data(self):
