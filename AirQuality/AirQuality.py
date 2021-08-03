@@ -7,7 +7,7 @@ import adafruit_sgp30
 i2c = busio.I2C(board.SCL, board.SDA, frequency=100000)
 sgp30 = adafruit_sgp30.Adafruit_SGP30(i2c)
 
-# IAQ 演算法
+# IAQ 演算法：將 H₂ 濃度換算成 eCO₂ 的濃度
 sgp30.iaq_init()
 sgp30.set_iaq_baseline(0x8973, 0x8AAE)
 
