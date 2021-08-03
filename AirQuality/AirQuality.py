@@ -26,11 +26,11 @@ class AirQuality:
         return str(sgp30.TVOC) + ' ppb'
     
     def get_Ethanol_Data(self):
-        # 乙醇濃度：不知道單位，但測都在 18000 上下
+        # 乙醇濃度：不知道單位，但測都在 18000 上下，可能是 ppb
         return str(sgp30.Ethanol)
     
     def get_H2_Data(self):
-        # H₂ 濃度：不知道單位，但測都在 13700 上下
+        # H₂ 濃度：不知道單位，但測都在 13700 上下，可能是 ppb
         return str(sgp30.H2)
 
     def good_or_bad(self):
