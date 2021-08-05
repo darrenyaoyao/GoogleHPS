@@ -16,13 +16,20 @@ class AirQuality:
         return
     
     def getData(self):
+        for i in range(10):
+            sgp30.eCO2
+            sgp30.TVOC
         return str(sgp30.eCO2) + ' ppm ／ ' + str(sgp30.TVOC) + ' ppb'
     
     def get_eCO2_Data(self):
+        for i in range(10):
+            sgp30.eCO2
         return str(sgp30.eCO2) + ' ppm'
     
     def get_TVOC_Data(self):
         # 揮發性有機化合物
+        for i in range(10):
+            sgp30.TVOC
         return str(sgp30.TVOC) + ' ppb'
     
     def get_Ethanol_Data(self):
