@@ -1,16 +1,23 @@
 # Google Hardware Product Sprint－2021 APAC TW
 Project name：Smart Gardener  
+
 # Install
 
 ```
-pip install -r requirements.txt
+sudo pip3 install -r requirements.txt
 ```
 
 # Run Web Server
 
 ```
-export FLASK_APP=SmartGardener
-flask run
+sudo python3 SmartGarderner.py
 ```
 
-open http://127.0.0.1:5000/ on browser
+# Check your ip
+
+```
+ifconfig
+```
+
+open http://[your ip]/ on your phone or laptop browser
+

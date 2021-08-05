@@ -20,3 +20,6 @@ def home():
            "溫度：" + str(temperatureHumidity.getTemperatureData()) + "<br/>" + \
            "濕度：" + str(temperatureHumidity.getHumidityData() + "<br/r>" + \
            "澆水：" + str(watering.getWateringData()))
+
+if __name__ == '__main__':
+   app.run(debug=True, port=80, host='0.0.0.0')
