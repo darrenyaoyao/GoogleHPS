@@ -6,14 +6,11 @@ Project name：Smart Gardener
 pip install -r requirements.txt
 ```
 
-# SSH
-```
-ifconfig
-```
-
 # Run Web Server
 
 ```
 export FLASK_APP=SmartGardener
 flask run
 ```
+
+open http://127.0.0.1:5000/ on browser
