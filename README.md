@@ -6,6 +6,11 @@ Project name：Smart Gardener
 pip install -r requirements.txt
 ```
 
+# SSH
+```
+ipconfig
+```
+
 # Run Web Server
 
 ```
