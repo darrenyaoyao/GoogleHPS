@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 # SSH
 ```
-ipconfig
+ifconfig
 ```
 
 # Run Web Server
