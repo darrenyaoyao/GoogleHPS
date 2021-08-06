@@ -1,5 +1,5 @@
 # GSensor
-
+![MCP3008_wiring](https://user-images.githubusercontent.com/31827037/128541790-2995bc43-6a1d-411e-b15c-5929e3833f3a.jpg)
 ## Wiring
 ### Digital Side
 * MCP3008 VDD -> 3.3V (red)
