@@ -56,7 +56,7 @@ while True:
         set_volume = remap_range(trim_pot, 0, 65535, 0, 100)
 
         # set OS volume playback volume
-        print('Volume = {volume}%' .format(volume = set_volume))
+        print('Value = {volume}%' .format(volume = set_volume))
         set_vol_cmd = 'sudo amixer cset numid=1 -- {volume}% > /dev/null' \
         .format(volume = set_volume)
         os.system(set_vol_cmd)
