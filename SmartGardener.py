@@ -14,7 +14,7 @@ watering = Watering()
 
 @app.route("/")
 def home():
-    return "空氣品質：" + airQuality.good_or_bad() + "（" + airQuality.getData() + "）" + "<br/>" + \
+    return "空氣品質：" + airQuality.good_or_bad() + "（eCO₂：" + str(airQuality.get_eCO2_Data()) + " ppm , TVOC：" + str(get_TVOC_Data()) + " ppb）" + "<br/>" + \
            "G-Sensor：" + str(gsensor.getData()) + "<br/>" + \
            "陽光強度：" + str(light.getData()) + "<br/>" + \
            "溫度：" + str(temperatureHumidity.getTemperatureData()) + "<br/>" + \
