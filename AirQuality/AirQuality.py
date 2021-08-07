@@ -16,7 +16,7 @@ class AirQuality:
         return
     
     def getData(self):
-        return str(sgp30.eCO2) + ' ppm ／ ' + str(sgp30.TVOC) + ' ppb'
+        return 'eCO₂：' + str(sgp30.eCO2) + ' ppm , TVOC：' + str(sgp30.TVOC) + ' ppb'
     
     def get_eCO2_Data(self):
         return str(sgp30.eCO2) + ' ppm'
