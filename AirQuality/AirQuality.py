@@ -15,23 +15,23 @@ class AirQuality:
     def __init__(self):
         return
     
-    def getData(self):
-        return 'eCO₂：' + str(sgp30.eCO2) + ' ppm , TVOC：' + str(sgp30.TVOC) + ' ppb'
+   #def getData(self):
+       #return
     
     def get_eCO2_Data(self):
-        return str(sgp30.eCO2) + ' ppm'
+        return sgp30.eCO2
     
     def get_TVOC_Data(self):
         # 揮發性有機化合物
-        return str(sgp30.TVOC) + ' ppb'
+        return sgp30.TVOC
     
     def get_Ethanol_Data(self):
         # 乙醇濃度：不知道單位，但測都在 18000 上下，可能是 ppb
-        return str(sgp30.Ethanol)
+        return sgp30.Ethanol
     
     def get_H2_Data(self):
         # H₂ 濃度：不知道單位，但測都在 13700 上下，可能是 ppb
-        return str(sgp30.H2)
+        return sgp30.H2
 
     def good_or_bad(self):
         # CO₂ 空氣品質標準：8 小時內平均在 1000 ppm 以內
