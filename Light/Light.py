@@ -19,3 +19,15 @@ class Light:
         a=colorutility.calculate_color_temperature(r, g, b)
         b=colorutility.calculate_lux(r, g, b)       
         return 'color temp:'+str(a)+'  '+'color lux:'+str(b)
+class Watering:
+    def __init__(self):
+        return
+    
+    def getWateringData(self):
+        r,g,b,c=apds.color_data
+        CL=colorutility.calculate_lux(r, g, b)  
+        if RH >2500:
+            answer = "Need water. "
+        else:
+            answer = "It's fine now. "
+        return answer
