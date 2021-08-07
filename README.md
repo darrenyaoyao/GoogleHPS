@@ -1,7 +1,8 @@
-# Google Hardware Product Sprint－2021 APAC TW
-Project name：Smart Gardener  
+# Google Hardware Product Sprint－2021 APAC TW HPS program
 
-# Install
+- **Project name**：Smart Gardener  
+
+# Install Libraries
 
 ```
 sudo pip3 install -r requirements.txt
@@ -19,5 +20,8 @@ sudo python3 SmartGarderner.py
 ifconfig
 ```
 
-open http://[your ip]/ on your phone or laptop browser
+open  
+>http://[your ip]/
+
+on your phone or laptop browser
 
