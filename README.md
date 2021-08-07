@@ -11,7 +11,7 @@ sudo pip3 install -r requirements.txt
 # Run Web Server
 
 ```
-sudo python3 SmartGarderner.py
+sudo python3 SmartGardener.py
 ```
 
 # Check your ip
