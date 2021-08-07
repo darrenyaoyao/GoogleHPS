@@ -1,4 +1,4 @@
-# Google Hardware Product Sprint－2021 APAC TW HPS program
+# Google Hardware Product Sprint－2021 APAC TW HPS
 
 - **Project name**：Smart Gardener  
 
@@ -24,4 +24,3 @@ open
 >http://[your ip]/
 
 on your phone or laptop browser
-
