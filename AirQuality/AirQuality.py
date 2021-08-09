@@ -1,22 +1,25 @@
 import time
+import math
 import board
 import busio
 import adafruit_sgp30
-
-# 定義 busio.I2C 和 sensor 物件
-i2c = busio.I2C(board.SCL, board.SDA, frequency=100000)
-sgp30 = adafruit_sgp30.Adafruit_SGP30(i2c)
-
-# IAQ 演算法：將 H₂ 濃度換算成 eCO₂ 的濃度
-sgp30.iaq_init()
-sgp30.set_iaq_baseline(0x8973, 0x8AAE)
+import adafruit_sht31d
 
 class AirQuality:
     def __init__(self):
+        # 定義 busio.I2C 和 sensor 物件
+        i2c = busio.I2C(board.SCL, board.SDA, frequency=100000)
+        sgp30 = adafruit_sgp30.Adafruit_SGP30(i2c)
+        sht31d = adafruit_sht31d.SHT31D(i2c)
+        # IAQ 演算法：將 H₂ 濃度換算成 eCO₂ 的濃度
+        sgp30.iaq_init()
+        sgp30.set_iaq_baseline(0x8973, 0x8AAE)
+        #
+        RH = int(sht31d.relative_humidity)
+        t = int(sht31d.temperature)
+        AH = 216.7 * ((RH / 100.0) * 6.112 * math.exp((17.62 * t) / (243.12 + t)) / (273.15 + t))
+        sgp30.set_iaq_humidity(AH)
         return
-    
-   #def getData(self):
-       #return
     
     def get_eCO2_Data(self):
         return sgp30.eCO2
