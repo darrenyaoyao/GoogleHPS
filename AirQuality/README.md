@@ -11,7 +11,6 @@
 |SCL|SCL|
 |SDA|SDA|
 
-- non use 1V8 Pin
 > ## Raspberry Pi GPIO Pin
 - **3V3**：1、17
 - **GND**：6、9、14、20、25、30、34、39
