@@ -85,3 +85,13 @@ while True:
         elapsed_sec = 0
         print("**** Baseline values: eCO₂ = 0x%x, TVOC = 0x%x" % (sgp30.baseline_eCO2, sgp30.baseline_TVOC))
 ```
+
+> ## Docs
+- [busio.I2C()](https://circuitpython.readthedocs.io/en/latest/shared-bindings/busio/#busio.I2C)
+- [adafruit_sgp30.Adafruit_SGP30()](https://circuitpython.readthedocs.io/projects/sgp30/en/latest/api.html#adafruit_sgp30.Adafruit_SGP30)
+- [iaq_init()](https://circuitpython.readthedocs.io/projects/sgp30/en/latest/api.html?highlight=iaq_init#adafruit_sgp30.Adafruit_SGP30.iaq_init)
+- [set_iaq_baseline()](https://circuitpython.readthedocs.io/projects/sgp30/en/latest/api.html?highlight=set_iaq_baseline#adafruit_sgp30.Adafruit_SGP30.set_iaq_baseline)
+- [eCO2](https://circuitpython.readthedocs.io/projects/sgp30/en/latest/api.html?highlight=eCO2#adafruit_sgp30.Adafruit_SGP30.eCO2)
+- [TVOC](https://circuitpython.readthedocs.io/projects/sgp30/en/latest/api.html?highlight=TVOC#adafruit_sgp30.Adafruit_SGP30.TVOC)
+- [baseline_eCO2](https://circuitpython.readthedocs.io/projects/sgp30/en/latest/api.html?highlight=baseline_eCO2#adafruit_sgp30.Adafruit_SGP30.baseline_eCO2)
+- [baseline_TVOC](https://circuitpython.readthedocs.io/projects/sgp30/en/latest/api.html?highlight=baseline_TVOC#adafruit_sgp30.Adafruit_SGP30.baseline_TVOC)
