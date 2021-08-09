@@ -62,25 +62,25 @@ import time
 import board
 import busio
 import adafruit_sgp30
-    
-# 定義 busio.I2C 和 sensor 物件
+
 i2c = busio.I2C(board.SCL, board.SDA, frequency=100000)
+# Create library object on our I2C port
 sgp30 = adafruit_sgp30.Adafruit_SGP30(i2c)
 
 print("SGP30 serial #", [hex(i) for i in sgp30.serial])
 
-# IAQ 演算法：將 H₂ 濃度換算成 eCO₂ 的濃度
+# IAQ algorithm：convert H₂ to eCO₂
 sgp30.iaq_init()
 sgp30.set_iaq_baseline(0x8973, 0x8AAE)
 
 elapsed_sec = 0
 
 while True:
-    # 讀值：eCO₂ & TVOC
+    # read values：eCO₂ & TVOC
     print("eCO₂ = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))     
-    time.sleep(1) # 等一下
+    time.sleep(1) # wait
     elapsed_sec += 1
-    # 每 10 次輸出 1 次 Baseline values 和 IAQ 演算法有關
+    # print baseline values every 10 times (relevant to IAQ algorithm)
     if elapsed_sec > 10:
         elapsed_sec = 0
         print("**** Baseline values: eCO₂ = 0x%x, TVOC = 0x%x" % (sgp30.baseline_eCO2, sgp30.baseline_TVOC))
