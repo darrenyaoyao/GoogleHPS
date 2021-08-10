@@ -98,4 +98,5 @@ while True:
 
 # Single Page Reference
 
-[Overview｜Adafruit SGP30 TVOC/eCO2 Gas Sensor｜Adafruit Learning System](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor?view=all)
+- [Overview｜Adafruit SGP30 TVOC/eCO2 Gas Sensor｜Adafruit Learning System](https://learn.adafruit.com/adafruit-sgp30-gas-tvoc-eco2-mox-sensor?view=all)
+- [SGP30 中文介紹](https://sharing-life-in-tw.blogspot.com/2021/08/Raspberry-Pi-SGP30.html)
