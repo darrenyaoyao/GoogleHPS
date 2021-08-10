@@ -80,7 +80,7 @@ while True:
     print("eCO₂ = %d ppm \t TVOC = %d ppb" % (sgp30.eCO2, sgp30.TVOC))     
     time.sleep(1) # wait
     elapsed_sec += 1
-    # print baseline values every 10 times (relevant to IAQ algorithm)
+    # every 10 passes print baseline values (relevant to IAQ algorithm)
     if elapsed_sec > 10:
         elapsed_sec = 0
         print("**** Baseline values: eCO₂ = 0x%x, TVOC = 0x%x" % (sgp30.baseline_eCO2, sgp30.baseline_TVOC))
