@@ -18,7 +18,7 @@
 - **SDA**：3
 <img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/AirQuality/Photos/Raspberry%20Pi%20GPIO.png" width='95%' height='95%'/>
 
-> ## Checking the I2C devices
+> ## Check the I2C devices
 
     pi@raspberrypi:~ $ sudo i2cdetect -y 1
          0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
