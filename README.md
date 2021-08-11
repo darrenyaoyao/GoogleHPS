@@ -11,9 +11,9 @@
 
 > ## Check the I2C devices
 
-- **Air Quality**：0x58
-- **Light**：0x39
-- **Temperature & Humidity**：0x44
+- **Air Quality**：`0x58`
+- **Light**：`0x39`
+- **Temperature & Humidity**：`0x44`
 
 ```
 pi@raspberrypi:~ $ sudo i2cdetect -y 1
@@ -32,21 +32,15 @@ pi@raspberrypi:~ $ sudo i2cdetect -y 1
 
 # Install Libraries
 
-```
-sudo pip3 install -r requirements.txt
-```
+`sudo pip3 install -r requirements.txt`
 
 # Run Web Server
 
-```
-sudo python3 SmartGardener.py
-```
+`sudo python3 SmartGardener.py`
 
 # Check your ip
 
-```
-ifconfig
-```
+`ifconfig`
 
 open  
 >http://[your ip]/
