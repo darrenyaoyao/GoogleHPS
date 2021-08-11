@@ -45,4 +45,4 @@ sudo python3 SmartGardener.py
 # Open the Website：http://[your ip]
 
 - use `ifconfig` to check your ip
-- replace `[your ip]` to something like `192.196.x.xxx`
+- replace `[your ip]` to something like `192.196.x.xx` or `192.196.x.xxx`
