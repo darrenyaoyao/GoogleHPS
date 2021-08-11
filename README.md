@@ -32,17 +32,17 @@ pi@raspberrypi:~ $ sudo i2cdetect -y 1
 
 # Install Libraries
 
-`sudo pip3 install -r requirements.txt`
+```
+sudo pip3 install -r requirements.txt
+```
 
 # Run Web Server
 
-`sudo python3 SmartGardener.py`
+```
+sudo python3 SmartGardener.py
+```
 
-# Check your ip
+# Open the Website：http://[your ip]
 
-`ifconfig`
-
-open  
->http://[your ip]/
-
-on your phone or laptop browser
+- use `ifconfig` to check your ip
+- replace `[your ip]` to something like `192.196.x.xxx`
