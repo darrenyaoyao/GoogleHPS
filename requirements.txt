@@ -5,3 +5,6 @@ adafruit-circuitpython-lis3dh
 adafruit-circuitpython-sgp30
 adafruit-circuitpython-busdevice
 adafruit-circuitpython-sht31d
+adafruit-circuitpython-apds9960
+adafruit-circuitpython-register
+adafruit-circuitpython-mcp3xxx
