@@ -11,9 +11,9 @@
 
 > ## Check the I2C devices
 
-- **SGP30**：0x58
-- **APDS9960**：0x39
-- **SHT31-D**：0x44
+- **Air Quality**：0x58
+- **Light**：0x39
+- **Temperature & Humidity**：0x44
 
 ```
 pi@raspberrypi:~ $ sudo i2cdetect -y 1
@@ -28,7 +28,7 @@ pi@raspberrypi:~ $ sudo i2cdetect -y 1
 70: -- -- -- -- -- -- -- --
 ```
 
-- **ADXL203EB**：SPI interface
+- **G-Sensor**：SPI interface
 
 # Install Libraries
 
