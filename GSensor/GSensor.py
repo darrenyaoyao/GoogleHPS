@@ -16,9 +16,9 @@ class GSensor:
 		# create the cs (chip select)
 		self.cs = digitalio.DigitalInOut(board.D22)
 		# create the mcp object
-		self.mcp = MCP.MCP3008(spi, cs)
+		self.mcp = MCP.MCP3008(self.spi, cs)
 		# create an analog input channel on pin 0
-		self.chan0 = AnalogIn(mcp, MCP.P0)
+		self.chan0 = AnalogIn(self.mcp, MCP.P0)
 		print('Raw ADC Value: ', self.chan0.value)
 		print('ADC Voltage: ' + str(self.chan0.voltage) + 'V')
 		self.last_read = 0
