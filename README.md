@@ -4,10 +4,10 @@
 
 # Wiring to Raspberry Pi
 
-- [**Air Quality**：SGP30](https://github.com/darrenyaoyao/GoogleHPS/tree/main/AirQuality#raspberry-pi-and-sgp30-wired-with-i2c)
-- **G-Sensor**：ADXL203EB
-- **Light**：APDS9960
-- **Temperature & Humidity**：SHT31-D
+- [**［I2C］Air Quality**：SGP30](https://github.com/darrenyaoyao/GoogleHPS/tree/main/AirQuality#raspberry-pi-and-sgp30-wired-with-i2c)
+- **［SPI］G-Sensor**：ADXL203EB
+- **［I2C］Light**：APDS9960
+- **［I2C］Temperature & Humidity**：SHT31-D
 
 > ## Check the I2C devices
 
@@ -27,8 +27,6 @@ pi@raspberrypi:~ $ sudo i2cdetect -y 1
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 70: -- -- -- -- -- -- -- --
 ```
-
-- **G-Sensor**：SPI interface
 
 # Install Libraries
 
