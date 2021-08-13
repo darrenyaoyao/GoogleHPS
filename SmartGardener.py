@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 from AirQuality.AirQuality import AirQuality
 from GSensor.GSensor import GSensor
 from Light.Light import Light
@@ -12,14 +12,21 @@ light = Light()
 temperatureHumidity = TemperatureHumidity()
 watering = Watering()
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def home():
-    return "空氣品質：" + airQuality.good_or_bad() + "（eCO₂：" + str(airQuality.get_eCO2_Data()) + " ppm、TVOC：" + str(airQuality.get_TVOC_Data()) + " ppb）" + "<br/>" + \
-           "G-Sensor：" + str(gsensor.getData()) + "<br/>" + \
-           "陽光強度：" + str(light.getData()) + "<br/>" + \
-           "溫度：" + str(temperatureHumidity.getTemperatureData()) + " °C<br/>" + \
-           "濕度：" + str(temperatureHumidity.getHumidityData() + "％<br/r>" + \
-           "澆水：" + str(watering.getWateringData()))
+    if request.method == 'POST':
+        if request.form.get('Noise') == 'Noise':
+            print('Noise')
+        elif request.form.get('Water') == 'Water':
+            print('Water')
+    return render_template('home.html', airQuality_good_or_bad=airQuality.good_or_bad(),
+            eCO2_Data=airQuality.get_eCO2_Data(),
+            TVOC_Data=airQuality.get_TVOC_Data(),
+            gsensor_data=str(gsensor.getData()),
+            light=str(light.getData()),
+            temperature=str(temperatureHumidity.getTemperatureData()),
+            humidity=str(temperatureHumidity.getHumidityData()),
+            watering=str(watering.getWateringData()))
 
 if __name__ == '__main__':
    app.run(debug=True, port=80, host='0.0.0.0')
