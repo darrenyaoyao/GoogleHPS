@@ -17,8 +17,8 @@ def home():
     return "空氣品質：" + airQuality.good_or_bad() + "（eCO₂：" + str(airQuality.get_eCO2_Data()) + " ppm、TVOC：" + str(airQuality.get_TVOC_Data()) + " ppb）" + "<br/>" + \
            "G-Sensor：" + str(gsensor.getData()) + "<br/>" + \
            "陽光強度：" + str(light.getData()) + "<br/>" + \
-           "溫度：" + str(temperatureHumidity.getTemperatureData()) + " °Ｃ<br/>" + \
-           "濕度：" + str(temperatureHumidity.getHumidityData() + " ％<br/r>" + \
+           "溫度：" + str(temperatureHumidity.getTemperatureData()) + " °C<br/>" + \
+           "濕度：" + str(temperatureHumidity.getHumidityData() + "％<br/r>" + \
            "澆水：" + str(watering.getWateringData()))
 
 if __name__ == '__main__':
