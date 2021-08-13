@@ -43,16 +43,16 @@ class AirQuality:
 
     def good_or_bad(self):
         # CO₂ standard：average 1000 ppm within 8 hours
-        # TVOC standard：average 0.56 ppm within 1 hours
+        # TVOC standard：average 0.56 ppb within 1 hours
         self.last_read_eCO2 += self.sgp30.eCO2
         self.last_read_eCO2_time += 1
         self.last_read_TVOC += self.sgp30.TVOC
         self.last_read_TVOC_time += 1
         
-        if self.last_read_eCO2/self.last_read_eCO2_time <= 1000 and self.last_read_TVOC/self.last_read_TVOC_time*1000 <= 0.56 :
+        if self.last_read_eCO2/self.last_read_eCO2_time <= 1000 and (self.last_read_TVOC/self.last_read_TVOC_time)*1000 <= 0.56 :
             return "Can't be better！"
-        elif self.last_read_eCO2/self.last_read_eCO2_time > 1000 and self.last_read_TVOC/self.last_read_TVOC_time*1000 <= 0.56 :
+        elif self.last_read_eCO2/self.last_read_eCO2_time > 1000 and (self.last_read_TVOC/self.last_read_TVOC_time)*1000 <= 0.56 :
             return 'It seems that CO₂ is too high！'
-        elif self.last_read_eCO2/self.last_read_eCO2_time <= 1000 and self.last_read_TVOC/self.last_read_TVOC_time*1000 > 0.56 :
+        elif self.last_read_eCO2/self.last_read_eCO2_time <= 1000 and (self.last_read_TVOC/self.last_read_TVOC_time)*1000 > 0.56 :
             return 'It seems that TVOC is too high！'
         else : return 'Both CO₂ and TVOC are too high！So bad......'
