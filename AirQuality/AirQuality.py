@@ -18,21 +18,12 @@ class AirQuality:
         AH = 216.7 * ((RH / 100.0) * 6.112 * math.exp((17.62 * t) / (243.12 + t)) / (273.15 + t))
         self.sgp30.set_iaq_humidity(AH)
         
-        self.last_read_eCO2 = 0
-        self.read_eCO2_time = 0
-        self.last_read_TVOC = 0
-        self.read_TVOC_time = 0
-        
         return
     
     def get_eCO2_Data(self):
-        self.last_read_eCO2 += self.sgp30.eCO2
-        self.read_eCO2_time += 1
         return self.sgp30.eCO2
     
     def get_TVOC_Data(self):
-        self.last_read_TVOC += self.sgp30.TVOC
-        self.read_TVOC_time += 1
         return self.sgp30.TVOC
     
     def get_Ethanol_Data(self):
@@ -44,15 +35,11 @@ class AirQuality:
     def good_or_bad(self):
         # CO₂ standard：average 1000 ppm within 8 hours
         # TVOC standard：average 560 ppb within 1 hours
-        self.last_read_eCO2 += self.sgp30.eCO2
-        self.read_eCO2_time += 1
-        self.last_read_TVOC += self.sgp30.TVOC
-        self.read_TVOC_time += 1
         
-        if self.last_read_eCO2/self.read_eCO2_time <= 1000 and self.last_read_TVOC/self.read_TVOC_time <= 560 :
+        if self.sgp30.eCO2 <= 1000 and self.sgp30.TVOC <= 560 :
             return "Can't be better！"
-        elif self.last_read_eCO2/self.read_eCO2_time > 1000 and self.last_read_TVOC/self.read_TVOC_time <= 560 :
+        elif self.sgp30.eCO2 > 1000 and self.sgp30.TVOC <= 560 :
             return 'It seems that CO₂ is too high！'
-        elif self.last_read_eCO2/self.read_eCO2_time <= 1000 and self.last_read_TVOC/self.read_TVOC_time <= 560 :
+        elif self.sgp30.eCO2 <= 1000 and self.sgp30.TVOC <= 560 :
             return 'It seems that TVOC is too high！'
         else : return 'Both CO₂ and TVOC are too high！So bad......'
