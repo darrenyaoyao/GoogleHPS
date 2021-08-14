@@ -16,11 +16,11 @@ class GSensor:
 		# create the cs (chip select)
 		self.cs = digitalio.DigitalInOut(board.D22)
 		# create the mcp object
-		self.mcp = MCP.MCP3008(self.spi, cs)
+		self.mcp = MCP.MCP3008(self.spi, self.cs)
 		# create an analog input channel on pin 0
 		self.chan0 = AnalogIn(self.mcp, MCP.P0)
-		print('Raw ADC Value: ', self.chan0.value)
-		print('ADC Voltage: ' + str(self.chan0.voltage) + 'V')
+		# print('Raw ADC Value: ', self.chan0.value)
+		# print('ADC Voltage: ' + str(self.chan0.voltage) + 'V')
 		self.last_read = 0
 		self.tolerance = 250
 
@@ -54,13 +54,11 @@ class GSensor:
 			# convert 16bit adc0 (0-65535) trim pot read into 0-100 volume level
 			set_volume = self.remap_range(trim_pot, 0, 65535, 0, 100)
 			# set OS volume playback volume
-			print('Value = {volume}%' .format(volume = set_volume))
+			# print('Value = {volume}%' .format(volume = set_volume))
 			set_vol_cmd = 'sudo amixer cset numid=1 -- {volume}% > /dev/null' \
 			.format(volume = set_volume)
 			os.system(set_vol_cmd)
 			# save the potentiometer reading for the next loop
 			self.last_read = trim_pot
-
-		# hang out and do nothing for a half second
-		time.sleep(0.5)
-		return set_volume
+			return set_volume
+		else : return self.remap_range(self.last_read, 0, 65535, 0, 100)
