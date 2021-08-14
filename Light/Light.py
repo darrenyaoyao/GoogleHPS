@@ -24,7 +24,7 @@ class Light:
             time.sleep(0.005)
         r,g,b,c = apds.color_data
         a = colorutility.calculate_color_temperature(r, g, b)
-        return '色溫：' + str(a,3))
+        return '色溫：' + str(round(a,3))
     
 class Watering:
     def __init__(self):
