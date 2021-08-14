@@ -1,6 +1,11 @@
 # GSensor
 ![MCP3008_wiring](https://user-images.githubusercontent.com/31827037/128541790-2995bc43-6a1d-411e-b15c-5929e3833f3a.jpg)
 ## Wiring
+### Raspberry pi GPIOs
+![Raspberry Pi GPIO](https://user-images.githubusercontent.com/31827037/129449383-edb58c4d-ee2c-483e-a50f-96c32c704b8c.png)
+### MCP3008 Pins
+![mcp3008](https://user-images.githubusercontent.com/31827037/129449405-79bd1746-ca7b-4858-a82d-31bbf400697a.gif)
+
 ### Digital Side
 * MCP3008 VDD -> 3.3V (red)
 * MCP3008 VREF -> 3.3V (red)
