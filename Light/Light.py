@@ -16,8 +16,9 @@ class Light:
             time.sleep(0.005)
         r,g,b,c = apds.color_data
         # a = colorutility.calculate_color_temperature(r, g, b)
-        b = colorutility.calculate_lux(r, g, b)       
-        return str(round(b,3)) + '（' + str(round(b/34196.163,1)) + '％）'
+        b = colorutility.calculate_lux(r, g, b)
+        # ambient Max light values：34196.163
+        return str(round(b,3)) + '（' + str(round(b / 34196.163,3)) + '％）'
 
     def get_color_temperature_Data(self):
         while not apds.color_data_ready:
