@@ -15,10 +15,17 @@ class Light:
         while not apds.color_data_ready:
             time.sleep(0.005)
         r,g,b,c = apds.color_data
-        a = colorutility.calculate_color_temperature(r, g, b)
+        # a = colorutility.calculate_color_temperature(r, g, b)
         b = colorutility.calculate_lux(r, g, b)       
-        return '色溫：' + str(round(a,3)) + '  亮度：' + str(round(b,3))
+        return str(b,3)) + '（' + round(b/34196.163,1) + '％）'
 
+    def get_color_temperature_Data(self):
+        while not apds.color_data_ready:
+            time.sleep(0.005)
+        r,g,b,c = apds.color_data
+        a = colorutility.calculate_color_temperature(r, g, b)
+        return '色溫：' + str(a,3))
+    
 class Watering:
     def __init__(self):
         return
