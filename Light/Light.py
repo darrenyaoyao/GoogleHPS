@@ -17,7 +17,7 @@ class Light:
         r,g,b,c = apds.color_data
         # a = colorutility.calculate_color_temperature(r, g, b)
         b = colorutility.calculate_lux(r, g, b)       
-        return str(round(b,3)) + '（' + round(b/34196.163,1) + '％）'
+        return str(round(b,3)) + '（' + str(round(b/34196.163,1)) + '％）'
 
     def get_color_temperature_Data(self):
         while not apds.color_data_ready:
