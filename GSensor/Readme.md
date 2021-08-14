@@ -17,3 +17,7 @@ Open SPI interface in Raspberry Pi Setting first
 * Pin #1 (left) goes to 3.3v (red)
 * Pin #2 (middle) connects to MCP3008 CH0 (analog input #0) with a purple wire
 * Pin #3 (right) connects to GND (black)
+
+### More detail
+you can follow [link](https://learn.adafruit.com/raspberry-pi-analog-digital-converters/mcp3008)
+
