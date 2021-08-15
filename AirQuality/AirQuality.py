@@ -37,9 +37,9 @@ class AirQuality:
         # TVOC standard：average 560 ppb within 1 hours
         
         if self.sgp30.eCO2 <= 1000 and self.sgp30.TVOC <= 560 :
-            return "Can't be better！"
+            return "Can't be better～"
         elif self.sgp30.eCO2 > 1000 and self.sgp30.TVOC <= 560 :
             return 'It seems that CO₂ is too high！'
         elif self.sgp30.eCO2 <= 1000 and self.sgp30.TVOC <= 560 :
             return 'It seems that TVOC is too high！'
-        else : return 'Both CO₂ and TVOC are too high！So bad......'
+        else : return 'Both CO₂ and TVOC are too high！！So bad......'
