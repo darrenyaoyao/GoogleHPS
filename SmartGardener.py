@@ -28,6 +28,7 @@ def home():
             temperature=str(temperatureHumidity.getTemperatureData()),
             temperatureF=str(temperatureHumidity.getTemperatureF()),
             dry_or_wet=temperatureHumidity.dry_or_wet(),
+            dry_or_wet_people=temperatureHumidity.dry_or_wet_people(),
             humidity=str(temperatureHumidity.getHumidityData()),)
 
 if __name__ == '__main__':
