@@ -14,6 +14,11 @@ class TemperatureHumidity:
         #print('Temp = {:.1f} \u00b0C'.format(sensorSHT31.temperature))
         TData = format(sensorSHT31.temperature, '.3f')
         return TData
+    
+    def getTemperatureF(self):
+        #print('Temp = {:.1f} \u00b0C'.format(sensorSHT31.temperature))
+        TFData = format(sensorSHT31.temperature * 9 / 5 + 32, '.3f')
+        return TFData
 
     def getHumidityData(self):
         #print('RH = {:.1f} %\n'.format(sensorSHT31.relative_humidity))
