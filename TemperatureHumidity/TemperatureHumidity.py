@@ -43,10 +43,6 @@ class Watering:
         return
     
     def getWateringData(self):
-        if RH < 50.0:
-            answer = "Need water. "
-        elif RH > 60.0:
-            answer = "Too much water. "
-        else:
-            answer = "It's fine now. "
-        return answer
+        if RH < 60.0: return "Need water."
+        elif RH > 60.0 and RH < 80 : return "It's comfortable."
+        else : return "It's dry！"
