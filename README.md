@@ -1,6 +1,7 @@
 # Google Hardware Product Sprint－2021 APAC TW HPS
 
-- **Project name**：Smart Gardener  
+- **Project name**：Demeter
+- **Mentor**：Weihsuan  
 
 # Wiring to Raspberry Pi
 
