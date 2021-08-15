@@ -37,6 +37,16 @@ class TemperatureHumidity:
     
     def dry_or_wet(self):
         RHData = sensorSHT31.relative_humidity
-        if RHData > 80 : return "The humidity is high！"
-        elif RHData > 60 and RHData < 80 : return "It's comfortable."
-        else : return "It's dry！"
+        TData = sensorSHT31.temperature
+        if RHData > 80 : return "It's humid for plants！"
+        elif RHData > 60 and RHData < 80 and TData > 22 and TData < 32 : return "Plants feel comfortable～"
+        elif RHData > 60 and RHData < 80 : return "It's good for plants."
+        else : return "It's dry for plants！"
+        
+    def dry_or_wet_people(self):
+        RHData = sensorSHT31.relative_humidity
+        TData = sensorSHT31.temperature
+        if RHData > 65 : return "It's humid for people！"
+        elif RHData > 45 and RHData < 65 and TData > 18 and TData < 23 : return "People feel comfortable～"
+        elif RHData > 45 and RHData < 65 : return "It's good for people."
+        else : return "It's dry for people！"
