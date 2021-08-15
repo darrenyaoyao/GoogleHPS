@@ -24,6 +24,7 @@ def home():
             TVOC_Data=airQuality.get_TVOC_Data(),
             gsensor_data=str(gsensor.getData()),
             light=str(light.getData()),
+            coloe_lux=str(get_color_temperature_Data()),
             temperature=str(temperatureHumidity.getTemperatureData()),
             humidity=str(temperatureHumidity.getHumidityData()),
             watering=str(watering.getWateringData()))
