@@ -28,6 +28,7 @@ def home():
             coloe_lux=str(light.get_color_temperature_Data()),
             cold_or_hot=temperatureHumidity.cold_or_hot(),
             temperature=str(temperatureHumidity.getTemperatureData()),
+            dry_or_wet=temperatureHumidity.dry_or_wet(),
             humidity=str(temperatureHumidity.getHumidityData()),
             watering=str(watering.getWateringData()))
 
