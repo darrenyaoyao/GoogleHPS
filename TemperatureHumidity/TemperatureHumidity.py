@@ -35,14 +35,3 @@ class TemperatureHumidity:
         if RHData > 80 : return "The humidity is high！"
         elif RHData > 60 and RHData < 80 : return "It's comfortable."
         else : return "It's dry！"
-    
-RH = sensorSHT31.relative_humidity
-
-class Watering:
-    def __init__(self):
-        return
-    
-    def getWateringData(self):
-        if RH < 60.0: return "Need water."
-        elif RH > 60.0 and RH < 80 : return "It's comfortable."
-        else : return "It's dry！"
