@@ -10,7 +10,6 @@ airQuality = AirQuality()
 gsensor = GSensor()
 light = Light()
 temperatureHumidity = TemperatureHumidity()
-watering = Watering()
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -30,7 +29,6 @@ def home():
             temperature=str(temperatureHumidity.getTemperatureData()),
             dry_or_wet=temperatureHumidity.dry_or_wet(),
             humidity=str(temperatureHumidity.getHumidityData()),
-            watering=str(watering.getWateringData()))
 
 if __name__ == '__main__':
    app.run(debug=True, port=80, host='0.0.0.0')
