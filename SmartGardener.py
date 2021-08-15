@@ -3,7 +3,6 @@ from AirQuality.AirQuality import AirQuality
 from GSensor.GSensor import GSensor
 from Light.Light import Light
 from TemperatureHumidity.TemperatureHumidity import TemperatureHumidity
-from TemperatureHumidity.TemperatureHumidity import Watering
 
 app = Flask("Smart Gardener")
 airQuality = AirQuality()
