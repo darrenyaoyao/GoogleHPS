@@ -1,7 +1,8 @@
 # Google Hardware Product Sprint－2021 APAC TW HPS
 
 - **Project name**：Demeter
-- **Mentor**：Weihsuan  
+- **Mentor**：Weihsuan
+- **Team**：2
 
 # Wiring to Raspberry Pi
 
