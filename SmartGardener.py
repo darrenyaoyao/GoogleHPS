@@ -26,6 +26,7 @@ def home():
             bright_ot_dark=light.bright_ot_dark(),
             light_value=light.getData(),
             coloe_lux=str(light.get_color_temperature_Data()),
+            cold_or_hot=temperatureHumidity.cold_or_hot(),
             temperature=str(temperatureHumidity.getTemperatureData()),
             humidity=str(temperatureHumidity.getHumidityData()),
             watering=str(watering.getWateringData()))
