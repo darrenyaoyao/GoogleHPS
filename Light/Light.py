@@ -18,14 +18,25 @@ class Light:
         # a = colorutility.calculate_color_temperature(r, g, b)
         b = colorutility.calculate_lux(r, g, b)
         # ambient Max light values：34196.163
-        return str(round(b,3)) + '（' + str(round(b / 34196.163,3)) + '％）'
+        return str(round(b,3)) + '（' + str(round(b / 34196.163 * 100,3)) + '％）'
 
     def get_color_temperature_Data(self):
         while not apds.color_data_ready:
             time.sleep(0.005)
         r,g,b,c = apds.color_data
         a = colorutility.calculate_color_temperature(r, g, b)
-        return '色溫：' + str(round(a,3))
+        return str(round(a,3))
+    
+    def bright_ot_dark(self):
+        while not apds.color_data_ready:
+            time.sleep(0.005)
+        r,g,b,c = apds.color_data
+        # a = colorutility.calculate_color_temperature(r, g, b)
+        b = colorutility.calculate_lux(r, g, b)
+        # ambient Max light values：34196.163
+        b = b / 34196.163 * 100
+        if b > 50 : return 'Bright enough！'
+        else : return "It's not bright enough！"
     
 class Watering:
     def __init__(self):
