@@ -15,8 +15,8 @@ def home():
     if request.method == 'POST':
         if request.form.get('Noise') == 'Noise':
             print('Noise')
-        elif request.form.get('Water') == 'Water':
-            print('Water')
+        elif request.form.get('Watering') == 'Watering':
+            print('Watering')
     return render_template('home.html', airQuality_good_or_bad=airQuality.good_or_bad(),
             eCO2_Data=airQuality.get_eCO2_Data(),
             TVOC_Data=airQuality.get_TVOC_Data(),
