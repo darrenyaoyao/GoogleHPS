@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="refresh" content="5">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -21,31 +21,52 @@
     <meta name="theme-color" content="#7952b3">
 
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+        	text-anchor: middle;
+        	-webkit-user-select: none;
+        	-moz-user-select: none;
+        	user-select: none;
+      	}
+		
+      	@media (min-width: 768px) {
+        	.bd-placeholder-img-lg {
+          		font-size: 3.5rem;
+        	}
+      	}
+        
+       .day { background-color: #fff; color: #000; }
+        
+        @media (prefers-color-scheme: light) { .day.cardtitle { background-color: #F8F9FA; } }
+        
+      	@media (prefers-color-scheme: dark) {
+      		.day.night {
+    			background-color: #22272E;
+      			border-color: #434C56;
+    			color: #fff;
+  			}
+      		.day.light {
+    			background-color: #373E47;
+      			border-color: #ADBAC7;
+    			color: #ADBAC7;
+  			}
+      		.day.cardtitle {
+    			background-color: #495057;
+      			color: #fff;
+  			}
+      	}
     </style>
 
     <!-- Custom styles for this template -->
     <link href="headers.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
 </head>
 
-<body>
+<body class="day night">
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="bootstrap" viewBox="0 0 118 94">
-    <title>Bootstrap</title>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
   </symbol>
   <symbol id="home" viewBox="0 0 16 16">
@@ -66,21 +87,19 @@
     <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
   </symbol>
 </svg>
-
-<main>
   
-  <div class="container px-4 py-5" id="icon-grid">
-    <h1 class="pb-2 border-bottom">
-	<span class="text-primary">G</span><span class="text-danger">o</span><span class="text-warning">o</span><span class="text-primary">g</span><span class="text-success">l</span><span class="text-danger">e</span>
+	<div class="container px-4 py-5" id="icon-grid">
+    	<h1 class="pb-2 border-bottom">
+		<span class="text-primary">G</span><span class="text-danger">o</span><span class="text-warning">o</span><span class="text-primary">g</span><span class="text-success">l</span><span class="text-danger">e</span>
       	HPS Team 2：Demeter
-    </h1>
+    	</h1>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
     <div class="col-sm-3">
-      <div class="card">
+      <div class="card day light">
         <div class="card-body">
-          <h4 class="card-title p-3 mb-2 bg-light text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#0d6efd" class="bi bi-moisture" viewBox="0 0 16 16">
+          <h4 class="card-title p-3 mb-2 day cardtitle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#0d6efd" class="bi bi-moisture" viewBox="0 0 18 18">
               <path d="M13.5 0a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V7.5h-1.5a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V15h-1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5h-2zM7 1.5l.364-.343a.5.5 0 0 0-.728 0l-.002.002-.006.007-.022.023-.08.088a28.458 28.458 0 0 0-1.274 1.517c-.769.983-1.714 2.325-2.385 3.727C2.368 7.564 2 8.682 2 9.733 2 12.614 4.212 15 7 15s5-2.386 5-5.267c0-1.05-.368-2.169-.867-3.212-.671-1.402-1.616-2.744-2.385-3.727a28.458 28.458 0 0 0-1.354-1.605l-.022-.023-.006-.007-.002-.001L7 1.5zm0 0-.364-.343L7 1.5zm-.016.766L7 2.247l.016.019c.24.274.572.667.944 1.144.611.781 1.32 1.776 1.901 2.827H4.14c.58-1.051 1.29-2.046 1.9-2.827.373-.477.706-.87.945-1.144zM3 9.733c0-.755.244-1.612.638-2.496h6.724c.395.884.638 1.741.638 2.496C11 12.117 9.182 14 7 14s-4-1.883-4-4.267z"></path>
               </svg>
               &nbsp;濕度 Humidity
@@ -89,21 +108,28 @@
 	  <p class="card-text">{{dry_or_wet_people}}</p>
 	</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="fw-bold">・濕度：</span>{{humidity}} ％</li>
+            <li class="list-group-item day light"><span class="fw-bold">・濕度：</span>{{humidity}} ％</li>
           </ul>
         <div class="card-body">
 	  <form method="post" action="/">
 	    <input class="btn btn-primary" type="submit" value="Watering" name="Watering"/>
-	    <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/TemperatureHumidity" class="btn btn-dark" target="_blank">Doc</a>
+        <button type="button" class="btn btn-dark">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+           </svg>
+           <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/TemperatureHumidity" class="text-white bg-dark" style="text-decoration:none;" target="_blank">
+           Doc
+           </a>
+         </button>
 	  </form>
         </div>
       </div>
     </div>
     <div class="col-sm-3">
-      <div class="card">
+      <div class="card day light">
         <div class="card-body">
-          <h4 class="card-title p-3 mb-2 bg-light text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#dc3545" class="bi bi-thermometer-half" viewBox="0 0 16 16">
+          <h4 class="card-title p-3 mb-2 day cardtitle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#dc3545" class="bi bi-thermometer-half" viewBox="0 0 18 18">
               <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V6.5a.5.5 0 0 1 1 0v4.585a1.5 1.5 0 0 1 1 1.415z"></path>
               <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"></path>
               </svg>
@@ -112,22 +138,29 @@
 	  <p class="card-text">{{cold_or_hot}}</p>
 	</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="fw-bold">・攝氏：</span>{{temperature}} °C</li>
-	    <li class="list-group-item"><span class="fw-bold">・華氏：</span>{{temperatureF}} °F</li>
+            <li class="list-group-item day light"><span class="fw-bold">・攝氏：</span>{{temperature}} °C</li>
+	        <li class="list-group-item day light"><span class="fw-bold">・華氏：</span>{{temperatureF}} °F</li>
           </ul>
         <div class="card-body">
 	  <form method="post" action="/">
 	    <input class="btn btn-primary" type="submit" value="Watering" name="Watering"/>
-            <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/TemperatureHumidity" class="btn btn-dark" target="_blank">Doc</a>
+        <button type="button" class="btn btn-dark">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+           </svg>
+           <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/TemperatureHumidity" class="text-white bg-dark" style="text-decoration:none;" target="_blank">
+           Doc
+           </a>
+         </button>
 	  </form>
         </div>
       </div>
     </div>
     <div class="col-sm-3">
-      <div class="card">
+      <div class="card day light">
         <div class="card-body">
-          <h4 class="card-title p-3 mb-2 bg-light text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#ffc107" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+          <h4 class="card-title p-3 mb-2 day cardtitle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#ffc107" class="bi bi-brightness-high-fill" viewBox="0 0 18 18">
               <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
               </svg>
               &nbsp;Colorutility
@@ -135,22 +168,29 @@
           <p class="card-text">{{bright_ot_dark}}</p>
         </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="fw-bold">・照度：</span>{{light_value}}</li>
-            <li class="list-group-item"><span class="fw-bold">・色溫：</span>{{coloe_lux}} °K</li>
+            <li class="list-group-item day light"><span class="fw-bold">・照度：</span>{{light_value}}</li>
+            <li class="list-group-item day light"><span class="fw-bold">・色溫：</span>{{coloe_lux}} °K</li>
           </ul>
         <div class="card-body">
 	  <form method="post" action="/">
 	    <input class="btn btn-primary" type="submit" value="Watering" name="Watering"/>
-            <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/Light" class="btn btn-dark" target="_blank">Doc</a>
+        <button type="button" class="btn btn-dark">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+           </svg>
+           <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/Light" class="text-white bg-dark" style="text-decoration:none;" target="_blank">
+           Doc
+           </a>
+         </button>
 	  </form>
         </div>
       </div>
     </div>
     <div class="col-sm-3">
-      <div class="card">
+      <div class="card day light">
         <div class="card-body">
-          <h4 class="card-title p-3 mb-2 bg-light text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#fc8c11" class="bi bi-arrows-move" viewBox="0 0 16 16">
+          <h4 class="card-title p-3 mb-2 day cardtitle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#fc8c11" class="bi bi-arrows-move" viewBox="0 0 18 18">
               <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10zM.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8z"></path>
               </svg>
               &nbsp;Accelerometer
@@ -159,21 +199,28 @@
 	  <p class="card-text">{{stable_or_sway}}</p>
 	</div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="fw-bold">・</span>{{gsensor_data}} ％</li>
+            <li class="list-group-item day light"><span class="fw-bold">・</span>{{gsensor_data}} ％</li>
           </ul>
         <div class="card-body">
           <form method="post" action="/">
 	    <input class="btn btn-danger" type="submit" value="Noise" name="Noise"/>
-	    <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/GSensor" class="btn btn-dark" target="_blank">Doc</a>
+        <button type="button" class="btn btn-dark">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+           </svg>
+           <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/GSensor" class="text-white bg-dark" style="text-decoration:none;" target="_blank">
+           Doc
+           </a>
+         </button>
 	  </form>
         </div>
       </div>
     </div>
     <div class="col-sm-3">
-      <div class="card">
+      <div class="card day light">
         <div class="card-body">
-          <h4 class="card-title p-3 mb-2 bg-light text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#2d9b41" class="bi bi-wind" viewBox="0 0 16 16">
+          <h4 class="card-title p-3 mb-2 day cardtitle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#2d9b41" class="bi bi-wind" viewBox="0 0 18 18">
               <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"></path>
               </svg>
               &nbsp;Air Quality
@@ -181,38 +228,40 @@
           <p class="card-text">{{airQuality_good_or_bad}}</p>
         </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="fw-bold">・eCO₂：</span>{{eCO2_Data}} ppm</li>
-            <li class="list-group-item"><span class="fw-bold">・TVOC：</span>{{TVOC_Data}} ppb</li>
+            <li class="list-group-item day light"><span class="fw-bold">・eCO₂：</span>{{eCO2_Data}} ppm</li>
+            <li class="list-group-item day light"><span class="fw-bold">・TVOC：</span>{{TVOC_Data}} ppb</li>
           </ul>
         <div class="card-body">
-          <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/AirQuality" class="btn btn-dark" target="_blank">Doc</a>
+        <button type="button" class="btn btn-dark">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+           </svg>
+           <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/AirQuality" class="text-white bg-dark" style="text-decoration:none;" target="_blank">
+           Doc
+           </a>
+         </button>
         </div>
       </div>
     </div>
   </div>
-
-</main>
   
   <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
-  <footer class="text-muted py-5">
-    <div class="p-3 mb-2 bg-light text-dark fixed-bottom">
-      <div class="container">
-        <p class="float-end mb-1">
-          <button type="button" class="btn btn-dark">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-            </svg>
-            <a href="https://github.com/darrenyaoyao/GoogleHPS" class="text-white bg-dark" style="text-decoration:none;" target="_blank">
-            GitHub
-            </a>
-          </button>
-        </p>
-        <p class="mb-1">© Google Hardware Product Sprint｜2021 APAC TW HPS Program：Team 2</p>
-        <p class="mb-0">Mentor：Weihsuan</p>
-      </div>
-    </div>
-  </footer>
-  
-</body>
-</html>
+	<footer class="text-muted py-3 border-top">
+  		<div class="container">
+    		<p class="float-end mb-1">
+      			<button type="button" class="btn btn-dark">
+            		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+            		<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            		</svg>
+            		<a href="https://github.com/darrenyaoyao/GoogleHPS" class="text-white bg-dark" style="text-decoration:none;" target="_blank">
+            		GitHub
+            		</a>
+          		</button>
+    		</p>
+    		<p class="mb-1">© Google Hardware Product Sprint｜2021 APAC TW HPS Program：Team 2</p>
+    		<p class="mb-0">Mentor：Weihsuan</p>
+  		</div>
+	</footer>
+    
+</body></html>
