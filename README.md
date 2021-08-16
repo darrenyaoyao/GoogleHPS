@@ -47,4 +47,4 @@ sudo python3 SmartGardener.py
 - use `ifconfig` to check your ip
 - replace `[your ip]` to something like `192.xxx.x.xx` or `192.xxx.x.xxx`
 
-<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/Photos/website.png" width='100%' height='100%'/>
+<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/Photos/web.png" width='100%' height='100%'/>
