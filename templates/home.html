@@ -161,6 +161,27 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title p-3 mb-2 bg-light text-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#fc8c11" class="bi bi-arrows-move" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10zM.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8z"></path>
+              </svg>
+              &nbsp;Accelerometer
+          </h4>
+	</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">・{{gsensor_data}} ％</li>
+          </ul>
+        <div class="card-body">
+          <form method="post" action="/">
+	    <input class="btn btn-primary" type="submit" value="Noise" name="Noise"/>
+	    <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/GSensor" class="btn btn-dark" target="_blank">Doc</a>
+	  </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title p-3 mb-2 bg-light text-dark">
               <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#0d6efd" class="bi bi-droplet-fill" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6zM6.646 4.646c-.376.377-1.272 1.489-2.093 3.13l.894.448c.78-1.559 1.616-2.58 1.907-2.87l-.708-.708z"></path>
               </svg>
@@ -175,27 +196,6 @@
           <form method="post" action="/">
 	    <input class="btn btn-primary" type="submit" value="Water" name="Water"/>
 	    <a href="https://github.com/darrenyaoyao/GoogleHPS/blob/10658992c5a2b98bb1d020283fc63c5c77a1514c/TemperatureHumidity/TemperatureHumidity.py#L38" class="btn btn-dark" target="_blank">Doc</a>
-	  </form>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title p-3 mb-2 bg-light text-dark">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" fill="#fc8c11" class="bi bi-arrows-move" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10zM.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8z"></path>
-              </svg>
-              &nbsp;Accelerometer
-          </h4>
-	</div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">・{{gsensor_data}} ％</li>
-          </ul>
-        <div class="card-body">
-          <form method="post" action="/">
-	    <input class="btn btn-primary" type="submit" value="Noise" name="Noise"/>
-	    <a href="https://github.com/darrenyaoyao/GoogleHPS/tree/main/GSensor" class="btn btn-dark" target="_blank">Doc</a>
 	  </form>
         </div>
       </div>
