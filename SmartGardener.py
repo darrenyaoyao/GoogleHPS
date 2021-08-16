@@ -21,6 +21,7 @@ def home():
             eCO2_Data=airQuality.get_eCO2_Data(),
             TVOC_Data=airQuality.get_TVOC_Data(),
             gsensor_data=str(gsensor.getData()),
+            stable_or_sway=gsensor.stable_or_sway(),
             bright_ot_dark=light.bright_ot_dark(),
             light_value=light.getData(),
             coloe_lux=str(light.get_color_temperature_Data()),
