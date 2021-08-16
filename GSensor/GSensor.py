@@ -76,5 +76,5 @@ class GSensor:
 			self.last_read = trim_pot
 			if set_volume > 50 : return "It's swaying！"
 			else : return "It's stable～"
-		else : if self.remap_range(self.last_read, 0, 65535, 0, 100) > 50 : return "It's swaying！"
-		       else : return "It's stable～"
+		elif self.remap_range(self.last_read, 0, 65535, 0, 100) > 50 : return "It's swaying！"
+		else : return "It's stable～"
