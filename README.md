@@ -1,5 +1,6 @@
-# Google Hardware Product Sprint－2021 APAC TW HPS
+# GoogleHPS
 
+Google Hardware Product Sprint－2021 APAC TW HPS Program
 - **Project name**：Demeter
 - **Mentor**：Weihsuan
 - **Team**：2
