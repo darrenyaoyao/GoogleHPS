@@ -3,6 +3,8 @@ from AirQuality.AirQuality import AirQuality
 from GSensor.GSensor import GSensor
 from Light.Light import Light
 from TemperatureHumidity.TemperatureHumidity import TemperatureHumidity
+import RPi.GPIO as GPIO
+import time
 
 app = Flask("Smart Gardener")
 airQuality = AirQuality()
@@ -10,11 +12,24 @@ gsensor = GSensor()
 light = Light()
 temperatureHumidity = TemperatureHumidity()
 
+GPIO.setmode(GPIO.BCM)
+BUZZIER=23
+GPIO.setup(BUZZIER, GPIO.OUT)
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
         if request.form.get('Noise') == 'Noise':
             print('Noise')
+            p = GPIO.PWM(BUZZIER, 50)
+            p.start(50)
+            p.ChangeFrequency(523)
+            time.sleep(1)
+            p.ChangeFrequency(587)
+            time.sleep(1)
+            p.ChangeFrequency(659)
+            time.sleep(1)
+            p.stop()
         elif request.form.get('Watering') == 'Watering':
             print('Watering')
     return render_template('home.html', airQuality_good_or_bad=airQuality.good_or_bad(),

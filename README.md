@@ -49,3 +49,7 @@ sudo python3 SmartGardener.py
 ### Screenshot with Day theme and Nithgt theme（Automatic switching）
 
 <img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/Photos/web.png" width='100%' height='100%'/>
+
+### Buzzier
+
+Connect ground to Buzzier negative pin, Raspberry Pi pin 16 (GPIO 23) to Buzzier positive pin
