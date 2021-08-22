@@ -16,7 +16,7 @@ Open SPI interface in Raspberry Pi Setting first
 * MCP3008 CLK -> SCLK (yellow)
 * MCP3008 DOUT -> MISO (purple)
 * MCP3008 DIN -> MOSI (white)
-* MCP3008 CS -> #22 (green)
+* MCP3008 CS -> GPIO08 (green)
 * MCP3008 DGND -> GND (black)
 ### Analog Side
 * Pin #1 (left) goes to 3.3v (red)
