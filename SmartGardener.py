@@ -32,7 +32,12 @@ def home():
             time.sleep(1)
             p.stop()
         elif request.form.get('Watering') == 'Watering':
-            print('Watering')
+               waterYear=datetime.datetime.now().year,
+               waterMonth=datetime.datetime.now().month,
+               waterDay=datetime.datetime.now().day,
+               waterHour=datetime.datetime.now().hour,
+               waterMinute=datetime.datetime.now().minute,
+               print('Watering')
     return render_template('home.html',
                            airQuality_good_or_bad=airQuality.good_or_bad(),
                            eCO2_Data=airQuality.get_eCO2_Data(),
@@ -53,6 +58,11 @@ def home():
                            day=datetime.datetime.now().day,
                            hour=datetime.datetime.now().hour,
                            minute=datetime.datetime.now().minute,
+                           waterYear=waterYear,
+                           waterMonth=waterMonth,
+                           waterDay=waterDay,
+                           waterHour=waterHour,
+                           waterMinute=waterMinute,
                           )
 
 if __name__ == '__main__':
