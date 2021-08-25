@@ -13,6 +13,7 @@ airQuality = AirQuality()
 gsensor = GSensor()
 light = Light()
 temperatureHumidity = TemperatureHumidity()
+timeInfo = timeInfo()
 
 GPIO.setmode(GPIO.BCM)
 BUZZIER=23
