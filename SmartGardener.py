@@ -63,8 +63,8 @@ def home():
                            year=datetime.datetime.now().year,
                            month=datetime.datetime.now().month,
                            day=datetime.datetime.now().day,
-                           hour=datetime.datetime.now().hour.zfill(2),
-                           minute=datetime.datetime.now().minute.zfill(2),
+                           hour=str(datetime.datetime.now().hour).zfill(2),
+                           minute=str(datetime.datetime.now().minute).zfill(2),
                            last_water_time=timeInfo.get_last_watering_time(),
                            last_noise_time=timeInfo.get_last_noise_time(),
                           )
