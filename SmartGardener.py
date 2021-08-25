@@ -22,6 +22,11 @@ def home():
     if request.method == 'POST':
         if request.form.get('Noise') == 'Noise':
             print('Noise')
+            noiseYear=datetime.datetime.now().year,
+            noiseMonth=datetime.datetime.now().month,
+            noiseDay=datetime.datetime.now().day,
+            noiseHour=datetime.datetime.now().hour,
+            noiseMinute=datetime.datetime.now().minute,
             p = GPIO.PWM(BUZZIER, 50)
             p.start(50)
             p.ChangeFrequency(523)
@@ -63,6 +68,11 @@ def home():
                            waterDay=waterDay,
                            waterHour=waterHour,
                            waterMinute=waterMinute,
+                           noiseYear=noiseYear,
+                           noiseMonth=noiseMonth,
+                           noiseDay=noiseDay,
+                           noiseHour=noiseHour,
+                           noiseMinute=noiseMinute,
                           )
 
 if __name__ == '__main__':
