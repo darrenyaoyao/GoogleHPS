@@ -3,7 +3,7 @@ from AirQuality.AirQuality import AirQuality
 from GSensor.GSensor import GSensor
 from Light.Light import Light
 from TemperatureHumidity.TemperatureHumidity import TemperatureHumidity
-from Time.time import Time
+from Time.time import timeInfo
 import RPi.GPIO as GPIO
 import datetime
 import time
@@ -23,11 +23,11 @@ def home():
     if request.method == 'POST':
         if request.form.get('Noise') == 'Noise':
             print('Noise')
-            update_last_noise_year(datetime.datetime.now().year)
-            update_last_noise_month(datetime.datetime.now().month)
-            update_last_noise_day(datetime.datetime.now().day)
-            update_last_noise_hour(datetime.datetime.now().hour)
-            update_last_noise_minute(datetime.datetime.now().minute)
+            timeInfo.update_last_noise_year(datetime.datetime.now().year)
+            timeInfo.update_last_noise_month(datetime.datetime.now().month)
+            timeInfo.update_last_noise_day(datetime.datetime.now().day)
+            timeInfo.update_last_noise_hour(datetime.datetime.now().hour)
+            timeInfo.update_last_noise_minute(datetime.datetime.now().minute)
             p = GPIO.PWM(BUZZIER, 50)
             p.start(50)
             p.ChangeFrequency(523)
@@ -38,11 +38,11 @@ def home():
             time.sleep(1)
             p.stop()
         elif request.form.get('Watering') == 'Watering':
-               update_last_watering_year(datetime.datetime.now().year)
-               update_last_watering_month(datetime.datetime.now().month)
-               update_last_watering_day(datetime.datetime.now().day)
-               update_last_watering_hour(datetime.datetime.now().hour)
-               update_last_watering_minute(datetime.datetime.now().minute)
+               timeInfo.update_last_watering_year(datetime.datetime.now().year)
+               timeInfo.update_last_watering_month(datetime.datetime.now().month)
+               timeInfo.update_last_watering_day(datetime.datetime.now().day)
+               timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
+               timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
                print('Watering')
     return render_template('home.html',
                            airQuality_good_or_bad=airQuality.good_or_bad(),
@@ -64,8 +64,8 @@ def home():
                            day=datetime.datetime.now().day,
                            hour=datetime.datetime.now().hour,
                            minute=datetime.datetime.now().minute,
-                           last_water_time=get_last_watering_time(),
-                           last_noise_time=get_last_noise_time(),
+                           last_water_time=timeInfo.get_last_watering_time(),
+                           last_noise_time=timeInfo.get_last_noise_time(),
                           )
 
 if __name__ == '__main__':
