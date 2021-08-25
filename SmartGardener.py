@@ -17,6 +17,17 @@ GPIO.setmode(GPIO.BCM)
 BUZZIER=23
 GPIO.setup(BUZZIER, GPIO.OUT)
 
+waterYear = 'null'
+waterMonth = 'null'
+waterDay = 'null'
+waterHour = 'null'
+waterMinute = 'null'
+noiseYear = 'null'
+noiseMonth = 'null'
+noiseDay = 'null'
+noiseHour = 'null'
+noiseMinute = 'null'
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
