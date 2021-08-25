@@ -39,7 +39,8 @@ def home():
             time.sleep(1)
             p.stop()
         elif request.form.get('Watering') == 'Watering':
-               timeInfo.update_last_watering_year(datetime.datetime.now().year)
+               wateryear = datetime.datetime.now().year
+               timeInfo.update_last_watering_year(wateryear)
                timeInfo.update_last_watering_month(datetime.datetime.now().month)
                timeInfo.update_last_watering_day(datetime.datetime.now().day)
                timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
