@@ -80,6 +80,8 @@ def home():
                                   minute=str(datetime.datetime.now().minute).zfill(2),
                                   last_water_time=timeInfo.get_last_watering_time(),
                                   last_noise_time=timeInfo.get_last_noise_time(),
+                                  upon_last_watering_time=timeInfo.upon_last_watering_time(),
+                                  upon_last_noise_time=timeInfo.upon_last_noise_time(),
                                   )
     return render_template('home.html',
                            airQuality_good_or_bad=airQuality.good_or_bad(),
