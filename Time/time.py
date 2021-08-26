@@ -39,6 +39,8 @@ class timeInfo:
         return str(self.waterMonth) + '月' + str(self.waterDay) + '日 ' + str(self.waterHour).zfill(2) + ':' + str(self.waterMinute).zfill(2)
     
     def upon_last_watering_time(self):
+        if self.waterHour == 0 and self.waterMinute == 0 :
+           return '未澆過水！'
         minute = datetime.datetime.now().hour *60 + datetime.datetime.now().minute - self.waterHour * 60 - self.waterMinute
         return str(minute) + ' 分'
     
@@ -67,5 +69,7 @@ class timeInfo:
         return str(self.noiseMonth) + '月' + str(self.noiseDay) + '日 ' + str(self.noiseHour).zfill(2) + ':' + str(self.noiseMinute).zfill(2)
 
     def upon_last_noise_time(self):
+        if self.noiseHour == 0 and self.noiseMinute == 0 : 
+           return '未鳴笛過！'
         minute = datetime.datetime.now().hour *60 + datetime.datetime.now().minute - self.noiseHour * 60 - self.noiseMinute
         return str(minute) + ' 分'
