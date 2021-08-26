@@ -40,7 +40,7 @@ def home():
             p.ChangeFrequency(659)
             time.sleep(1)
             GPIO.output(BUZZIER, GPIO.HIGH)
-            p.deinit()
+            PWM.deinit（）
             p.stop()
             
             
