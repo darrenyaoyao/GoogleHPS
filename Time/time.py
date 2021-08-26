@@ -40,9 +40,7 @@ class timeInfo:
     
     def upon_last_watering_time(self):
         minute = self.waterHour * 60 + self.waterMinute - datetime.datetime.now().hour *60 - datetime.datetime.now().minute
-        hour = minute / 60
-        minute %= 60
-        return str(hour) + ':' + str(minute)
+        return str(minute) + '分'
     
     def update_last_noise_year(self,year):
         self.noiseYear = year
@@ -70,6 +68,4 @@ class timeInfo:
 
     def upon_last_noise_time(self):
         minute = self.noiseHour * 60 + self.noiseMinute - datetime.datetime.now().hour *60 - datetime.datetime.now().minute
-        hour = minute / 60
-        minute %= 60
-        return str(hour) + ':' + str(minute)
+        return str(minute) + '分'
