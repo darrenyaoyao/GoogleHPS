@@ -45,6 +45,14 @@ def home():
                timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
                timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
                print('Watering')
+    if temperatureHumidity.auto_water() == true
+       if datetime.datetime.now().hour * 60 + datetime.datetime.now().minute - timeInfo.get_last_watering_hour() * 60 - timeInfo.get_last_watering_minute() >= 720
+          timeInfo.update_last_watering_year(str(datetime.datetime.now().year))
+          timeInfo.update_last_watering_month(datetime.datetime.now().month)
+          timeInfo.update_last_watering_day(datetime.datetime.now().day)
+          timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
+          timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
+          print('Watering')
     return render_template('home.html',
                            airQuality_good_or_bad=airQuality.good_or_bad(),
                            eCO2_Data=airQuality.get_eCO2_Data(),
