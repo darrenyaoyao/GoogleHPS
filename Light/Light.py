@@ -20,7 +20,7 @@ class Light:
         # ambient Max light values：34196.163
         return str(round(b,3)) + ' lux'
 
-    def lux_percentage(self)
+    def lux_percentage(self):
         while not apds.color_data_ready:
             time.sleep(0.005)
         r,g,b,c = apds.color_data
