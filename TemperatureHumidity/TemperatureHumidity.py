@@ -54,5 +54,5 @@ class TemperatureHumidity:
     def auto_water(self):
         RHData = sensorSHT31.relative_humidity
         TData = sensorSHT31.temperature
-        if RHData < 60 : return true
-        else : return false
+        if RHData < 60 : return 'true'
+        else : return 'false'
