@@ -17,7 +17,7 @@ timeInfo = timeInfo()
 
 GPIO.setmode(GPIO.BCM)
 BUZZIER = 23
-#GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
+GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
 RELAY = 24
 GPIO.setup(RELAY, GPIO.OUT)
 
@@ -42,7 +42,6 @@ def home():
             time.sleep(1)
             p.stop()
             GPIO.output(BUZZIER, GPIO.HIGH)
-            GPIO.cleanup()
             
             
         elif request.form.get('Watering') == 'Watering':
