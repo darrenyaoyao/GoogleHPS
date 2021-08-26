@@ -17,7 +17,7 @@ timeInfo = timeInfo()
 
 GPIO.setmode(GPIO.BCM)
 BUZZIER = 23
-GPIO.setup(BUZZIER, GPIO.OUT)
+GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
 RELAY = 24
 GPIO.setup(RELAY, GPIO.OUT)
 
