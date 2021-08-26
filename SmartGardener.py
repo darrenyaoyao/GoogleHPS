@@ -40,7 +40,8 @@ def home():
             p.ChangeFrequency(659)
             time.sleep(1)
             p.stop()
-            GPIO.output(BUZZIER, GPIO.HIGH)
+            #GPIO.output(BUZZIER, GPIO.HIGH)
+            GPIO.cleanup()
             
         elif request.form.get('Watering') == 'Watering':
                timeInfo.update_last_watering_year(str(datetime.datetime.now().year))
