@@ -1,7 +1,7 @@
 import datetime
 
 class timeInfo:
-    def __init__(self,waterYear,waterMonth,waterDay,waterHour,waterMinute,noiseYear,noiseMonth,noiseDay,noiseHour,noiseMinute):
+    def __init__(self):
         self.waterYear = ' '
         self.waterMonth = ' '
         self.waterDay = ' '
