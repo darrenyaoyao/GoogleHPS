@@ -40,7 +40,7 @@ def home():
             #p.ChangeFrequency(659)
             #time.sleep(1)
             #p.stop()
-            GPIO.output(BUZZIER, GPIO.LOW
+            GPIO.output(BUZZIER, GPIO.LOW)
             time.sleep(2)          
             GPIO.output(BUZZIER, GPIO.HIGH)
             
