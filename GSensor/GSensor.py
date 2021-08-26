@@ -90,7 +90,7 @@ class GSensor:
 			.format(volume = set_volume)
 			os.system(set_vol_cmd)
 			self.last_read = trim_pot
-			if set_volume > 50 : return 'true'
-			else : return 'false'
-		elif self.remap_range(self.last_read, 0, 65535, 0, 100) > 50 : return 'true'
-		else : return 'false'
+			if set_volume > 50 : return "true"
+			else : return "false"
+		elif self.remap_range(self.last_read, 0, 65535, 0, 100) > 50 : return "true"
+		else : return "false"
