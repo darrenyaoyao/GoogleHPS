@@ -41,7 +41,7 @@ def home():
             #time.sleep(1)
             #p.stop()
             GPIO.output(BUZZIER, GPIO.LOW)
-            time.sleep(2)          
+            time.sleep(5)          
             GPIO.output(BUZZIER, GPIO.HIGH)
             
             
