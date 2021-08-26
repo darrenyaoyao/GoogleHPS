@@ -37,16 +37,3 @@ class Light:
         b = b / 34196.163 * 100
         if b > 50 : return 'Bright enough！'
         else : return "It's not bright enough！"
-    
-class Watering:
-    def __init__(self):
-        return
-    
-    def getWateringData(self):
-        r,g,b,c = apds.color_data
-        CL = colorutility.calculate_lux(r, g, b)  
-        if RH > 2500:
-            answer = "Need water. "
-        else:
-            answer = "It's fine now. "
-        return answer
