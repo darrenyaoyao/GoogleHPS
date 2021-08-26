@@ -56,10 +56,10 @@ Connect ground to Buzzier negative pin, Raspberry Pi pin 16 (GPIO 23) to Buzzier
 
 ### Relay and pump
 
-Relay's VCC connect pin4(5v5)
-Relay's GND connect pin6(GND)
-Relay's IN connect pin18(GPIO24)
+- **Relay's VCC connect pin4(5v5)
+- **Relay's GND connect pin6(GND)
+- **Relay's IN connect pin18(GPIO24)
 
-Relay's NO connect pin17(3v3)
-Relay's COM connect pump's red wire
-pump's black wire connect ground
+- **Relay's NO connect pin17(3v3)
+- **Relay's COM connect pump's red wire
+- **pump's black wire connect ground
