@@ -15,6 +15,12 @@ light = Light()
 temperatureHumidity = TemperatureHumidity()
 timeInfo = timeInfo()
 
+GPIO.setmode(GPIO.BCM)
+BUZZIER = 23
+GPIO.setup(BUZZIER, GPIO.OUT)
+RELAY = 24
+GPIO.setup(RELAY, GPIO.OUT)
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
@@ -25,9 +31,6 @@ def home():
             timeInfo.update_last_noise_hour(datetime.datetime.now().hour)
             timeInfo.update_last_noise_minute(datetime.datetime.now().minute)
             print('Noise')
-            GPIO.setmode(GPIO.BCM)
-            BUZZIER = 23
-            GPIO.setup(BUZZIER, GPIO.OUT)
             p = GPIO.PWM(BUZZIER, 50)
             p.start(50)
             p.ChangeFrequency(523)
@@ -44,15 +47,15 @@ def home():
                timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
                timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
                print('Watering')
-               GPIO.setmode(GPIO.BCM)
-               RELAY = 24 #17
-               GPIO.setup(RELAY, GPIO.OUT)
                GPIO.output(RELAY, GPIO.HIGH)          
                time.sleep(3)
                GPIO.output(RELAY, GPIO.LOW)
     if temperatureHumidity.auto_water() == 'true' :
         # 等於 0 初始值；或是距離上次澆水滿半天 12 小時，而且溼度又乾，就自動澆水
         if timeInfo.get_last_watering_hour() == 0 or datetime.datetime.now().hour * 60 + datetime.datetime.now().minute - timeInfo.get_last_watering_hour() * 60 - timeInfo.get_last_watering_minute() >= 720 :
+           GPIO.output(RELAY, GPIO.HIGH)          
+           time.sleep(3)
+           GPIO.output(RELAY, GPIO.LOW)
            timeInfo.update_last_watering_month(datetime.datetime.now().month)
            timeInfo.update_last_watering_day(datetime.datetime.now().day)
            timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
