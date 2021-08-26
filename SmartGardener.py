@@ -15,7 +15,7 @@ light = Light()
 temperatureHumidity = TemperatureHumidity()
 timeInfo = timeInfo()
 
-GPIO.setmode(GPIO.BCM)
+#GPIO.setmode(GPIO.BCM)
 #BUZZIER = 23
 #GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
 #RELAY = 24
@@ -31,7 +31,7 @@ def home():
             timeInfo.update_last_noise_hour(datetime.datetime.now().hour)
             timeInfo.update_last_noise_minute(datetime.datetime.now().minute)
             print('Noise')
-            #GPIO.setmode(GPIO.BCM)
+            GPIO.setmode(GPIO.BCM)
             BUZZIER = 23
             GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
             p = GPIO.PWM(BUZZIER, 50)
@@ -53,6 +53,7 @@ def home():
                timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
                timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
                print('Watering')
+               GPIO.setmode(GPIO.BCM)
                RELAY = 24
                GPIO.setup(RELAY, GPIO.OUT)
                GPIO.output(RELAY, GPIO.HIGH)          
