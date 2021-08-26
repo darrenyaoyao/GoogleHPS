@@ -44,6 +44,8 @@ class timeInfo:
         if self.waterHour == 0 and self.waterMinute == 0 :
            return '未澆過水！'
         minute = datetime.datetime.now().hour *60 + datetime.datetime.now().minute - self.waterHour * 60 - self.waterMinute
+        if minute == 0:
+            return '剛澆過水！'
         return str(minute) + ' 分'
     
     def update_last_noise_year(self,year):
