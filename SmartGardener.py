@@ -39,8 +39,9 @@ def home():
             time.sleep(1)
             p.ChangeFrequency(659)
             time.sleep(1)
+            GPIO.output(BUZZIER, GPIO.HIGH)
             p.stop()
-            #GPIO.output(BUZZIER, GPIO.HIGH)
+            
             
             
         elif request.form.get('Watering') == 'Watering':
