@@ -78,3 +78,19 @@ class GSensor:
 			else : return "It's stable now～"
 		elif self.remap_range(self.last_read, 0, 65535, 0, 100) > 50 : return "It's swaying！"
 		else : return "It's stable now～"
+		
+	def auto_noise(self):
+        	trim_pot_changed = False
+		trim_pot = self.chan0.value
+		pot_adjust = abs(trim_pot - self.last_read)
+		if pot_adjust > self.tolerance : trim_pot_changed = True
+		if trim_pot_changed:
+			set_volume = self.remap_range(trim_pot, 0, 65535, 0, 100)
+			set_vol_cmd = 'sudo amixer cset numid=1 -- {volume}% > /dev/null' \
+			.format(volume = set_volume)
+			os.system(set_vol_cmd)
+			self.last_read = trim_pot
+			if set_volume > 50 : return 'true'
+			else : return 'false'
+		elif self.remap_range(self.last_read, 0, 65535, 0, 100) > 50 : return 'true'
+		else : return 'false'
