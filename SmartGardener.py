@@ -31,6 +31,7 @@ def home():
             timeInfo.update_last_noise_hour(datetime.datetime.now().hour)
             timeInfo.update_last_noise_minute(datetime.datetime.now().minute)
             print('Noise')
+            #無源蜂鳴器
             #p = GPIO.PWM(BUZZIER, 50)
             #p.start(50)
             #p.ChangeFrequency(523)
@@ -40,6 +41,7 @@ def home():
             #p.ChangeFrequency(659)
             #time.sleep(1)
             #p.stop()
+            #有源蜂鳴器
             GPIO.output(BUZZIER, GPIO.LOW)
             time.sleep(5)          
             GPIO.output(BUZZIER, GPIO.HIGH)
