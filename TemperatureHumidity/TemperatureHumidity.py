@@ -50,3 +50,9 @@ class TemperatureHumidity:
         elif RHData > 45 and RHData < 65 and TData > 18 and TData < 23 : return "People feel comfortable～"
         elif RHData > 45 and RHData < 65 : return "It's good for people."
         else : return "It's dry for people！"
+
+    def auto_water(self):
+        RHData = sensorSHT31.relative_humidity
+        TData = sensorSHT31.temperature
+        if RHData < 60 : return true
+        else : return false
