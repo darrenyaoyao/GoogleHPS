@@ -31,7 +31,7 @@ class timeInfo:
         self.waterMinute = minute
     
     def get_last_watering_time(self):
-        return str(self.waterMonth) + '月' + str(self.waterDay) + '日 ' + str(self.waterHour) + ':' + str(self.waterMinute)
+        return str(self.waterMonth) + '月' + str(self.waterDay) + '日 ' + str(self.waterHour).zfill(2) + ':' + str(self.waterMinute).zfill(2)
     
     def update_last_noise_year(self,year):
         self.noiseYear = year
@@ -49,4 +49,4 @@ class timeInfo:
         self.noiseMinute = minute
     
     def get_last_noise_time(self):
-        return str(self.noiseMonth) + '月' + str(self.noiseDay) + '日 ' + str(self.noiseHour) + ':' + str(self.noiseMinute)
+        return str(self.noiseMonth) + '月' + str(self.noiseDay) + '日 ' + str(self.noiseHour).zfill(2) + ':' + str(self.noiseMinute).zfill(2)
