@@ -2,16 +2,16 @@ import datetime
 
 class timeInfo:
     def __init__(self):
-        self.waterYear = ' '
-        self.waterMonth = ' '
-        self.waterDay = ' '
-        self.waterHour = ' '
-        self.waterMinute = ' '
-        self.noiseYear = ' '
-        self.noiseMonth = ' '
-        self.noiseDay = ' '
-        self.noiseHour = ' '
-        self.noiseMinute = ' '
+        self.waterYear = 9999
+        self.waterMonth = 99
+        self.waterDay = 99
+        self.waterHour = 99
+        self.waterMinute = 99
+        self.noiseYear = 9999
+        self.noiseMonth = 99
+        self.noiseDay = 99
+        self.noiseHour = 99
+        self.noiseMinute = 99
         
         return
     
