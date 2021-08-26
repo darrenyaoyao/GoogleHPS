@@ -47,10 +47,10 @@ def home():
                timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
                timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
                print('Watering')
-            GPIO.output(24, GPIO.HIGH)          
-            time.sleep(3)
-            GPIO.output(24, GPIO.LOW)
-            GPIO.cleanup()
+               GPIO.output(24, GPIO.HIGH)          
+               time.sleep(3)
+               GPIO.output(24, GPIO.LOW)
+               GPIO.cleanup()
     if temperatureHumidity.auto_water() == 'true' :
         # 等於 0 初始值；或是距離上次澆水滿半天 12 小時，而且溼度又乾，就自動澆水
         if timeInfo.get_last_watering_hour() == 0 or datetime.datetime.now().hour * 60 + datetime.datetime.now().minute - timeInfo.get_last_watering_hour() * 60 - timeInfo.get_last_watering_minute() >= 720 :
@@ -103,6 +103,8 @@ def home():
                            minute=str(datetime.datetime.now().minute).zfill(2),
                            last_water_time=timeInfo.get_last_watering_time(),
                            last_noise_time=timeInfo.get_last_noise_time(),
+                           upon_last_watering_time=timeInfo.upon_last_watering_time(),
+                           upon_last_noise_time=timeInfo.upon_last_noise_time(),
                           )
 
 if __name__ == '__main__':
