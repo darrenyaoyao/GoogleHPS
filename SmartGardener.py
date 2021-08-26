@@ -15,11 +15,11 @@ light = Light()
 temperatureHumidity = TemperatureHumidity()
 timeInfo = timeInfo()
 
-#GPIO.setmode(GPIO.BCM)
-#BUZZIER = 23
-#GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
-#RELAY = 24
-#GPIO.setup(RELAY, GPIO.OUT)
+GPIO.setmode(GPIO.BCM)
+BUZZIER = 23
+GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
+RELAY = 24
+GPIO.setup(RELAY, GPIO.OUT)
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -31,9 +31,6 @@ def home():
             timeInfo.update_last_noise_hour(datetime.datetime.now().hour)
             timeInfo.update_last_noise_minute(datetime.datetime.now().minute)
             print('Noise')
-            GPIO.setmode(GPIO.BCM)
-            BUZZIER = 23
-            GPIO.setup(BUZZIER, GPIO.OUT, initial=GPIO.HIGH)
             p = GPIO.PWM(BUZZIER, 50)
             p.start(50)
             p.ChangeFrequency(523)
@@ -44,7 +41,7 @@ def home():
             time.sleep(1)
             p.stop()
             #GPIO.output(BUZZIER, GPIO.HIGH)
-            GPIO.cleanup()
+            
             
         elif request.form.get('Watering') == 'Watering':
                timeInfo.update_last_watering_year(str(datetime.datetime.now().year))
@@ -53,9 +50,6 @@ def home():
                timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
                timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
                print('Watering')
-               GPIO.setmode(GPIO.BCM)
-               RELAY = 24
-               GPIO.setup(RELAY, GPIO.OUT)
                GPIO.output(RELAY, GPIO.HIGH)          
                time.sleep(3)
                GPIO.output(RELAY, GPIO.LOW)
