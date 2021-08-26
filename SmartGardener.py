@@ -47,9 +47,9 @@ def home():
                timeInfo.update_last_watering_hour(datetime.datetime.now().hour)
                timeInfo.update_last_watering_minute(datetime.datetime.now().minute)
                print('Watering')
-            GPIO.output(18, GPIO.HIGH)          
-            time.sleep(5)
-            GPIO.output(18, GPIO.LOW)
+            GPIO.output(24, GPIO.HIGH)          
+            time.sleep(3)
+            GPIO.output(24, GPIO.LOW)
             GPIO.cleanup()
     if temperatureHumidity.auto_water() == 'true' :
         # 等於 0 初始值；或是距離上次澆水滿半天 12 小時，而且溼度又乾，就自動澆水
