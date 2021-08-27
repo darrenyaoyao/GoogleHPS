@@ -50,22 +50,15 @@ sudo python3 SmartGardener.py
 
 <img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/Photos/website.png" width='100%' height='100%'/>
 
-### Buzzier
+## Buzzer
 
 Connect ground to Buzzier negative pin, Raspberry Pi pin 16 (GPIO 23) to Buzzier positive pin
 
-### Relay and Pump
+## Relay and Pump
 
-Relay's VCC connect pin4(5v5)
-
-Relay's GND connect pin6(GND)
-
-Relay's IN connect pin18(GPIO24)
-
-
-
-Relay's NO connect pin17(3v3)
-
-Relay's COM connect Pump's red wire
-
-Pump's black wire connect ground
+- Relay's VCC connect pin4(5v5)
+- Relay's GND connect pin6(GND)
+- Relay's IN connect pin18(GPIO24)
+- Relay's NO connect pin17(3v3)
+- Relay's COM connect Pump's red wire
+- Pump's black wire connect ground
