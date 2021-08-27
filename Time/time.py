@@ -37,12 +37,12 @@ class timeInfo:
     
     def get_last_watering_time(self):
         if self.waterHour == 0 and self.waterMinute == 0 :
-           return '未澆過水！'
+           return '未澆過水'
         return str(self.waterMonth) + '月' + str(self.waterDay) + '日 ' + str(self.waterHour).zfill(2) + ':' + str(self.waterMinute).zfill(2)
     
     def upon_last_watering_time(self):
         if self.waterHour == 0 and self.waterMinute == 0 :
-           return '未澆過水！'
+           return '未澆過水'
         minute = datetime.datetime.now().hour *60 + datetime.datetime.now().minute - self.waterHour * 60 - self.waterMinute
         if minute == 0:
             return '剛澆過水'
