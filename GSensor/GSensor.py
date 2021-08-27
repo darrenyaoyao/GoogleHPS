@@ -82,15 +82,13 @@ class GSensor:
 		else : return self.remap_range(self.last_read_y, 0, 65535, 0, 100)
 		
 	def stable_or_sway(self):
-		x = self.getData()
-		y = self.getDataY()
-		set_volume = math.sqrt(x * x + y * y)
-		if set_volume > 50 : return "It's swaying！"
-		else : return "It's stable now～"
+            x = self.getData()
+            y = self.getDataY()
+            if math.sqrt(x * x + y * y) > 50 : return "It's swaying！"
+            else : return "It's stable now～"
 		
 	def auto_noise(self):
             x = self.getData()
-	    y = self.getDataY()
-	    set_volume = math.sqrt(x * x + y * y)
-            if set_volume > 50 : return 'true'
+            y = self.getDataY()
+            if math.sqrt(x * x + y * y) > 50 : return 'true'
             else : return "false"
