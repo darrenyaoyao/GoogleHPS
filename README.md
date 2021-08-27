@@ -48,7 +48,7 @@ sudo python3 SmartGardener.py
 
 ### Screenshot with Day theme and Nithgt theme（Automatic switching）
 
-<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/Photos/website.png" width='100%' height='100%'/>
+<img src="https://github.com/darrenyaoyao/GoogleHPS/blob/main/Photos/web.png" width='100%' height='100%'/>
 
 ## Buzzer
 
