@@ -34,6 +34,7 @@ pi@raspberrypi:~ $ sudo i2cdetect -y 1
 - **Raspberry PI** to **MCP3008** to **ADXL203EB**
 
 ```
+pi@raspberrypi:~ $ ls -l /dev/spidev*
 crw-rw---- 1 root spi 153, 0 Aug 28 13:17 /dev/spidev0.0
 crw-rw---- 1 root spi 153, 1 Aug 28 13:17 /dev/spidev0.1
 ```
