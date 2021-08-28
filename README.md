@@ -29,6 +29,15 @@ pi@raspberrypi:~ $ sudo i2cdetect -y 1
 70: -- -- -- -- -- -- -- --
 ```
 
+### Check the SPI devices
+
+- **MCP3008**
+
+```
+crw-rw---- 1 root spi 153, 0 Aug 28 13:17 /dev/spidev0.0
+crw-rw---- 1 root spi 153, 1 Aug 28 13:17 /dev/spidev0.1
+```
+
 ## Install Libraries
 
 ```
